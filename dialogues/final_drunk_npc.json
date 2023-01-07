@@ -1,0 +1,37 @@
+[
+  [
+    {
+      "name": "Traveler",
+      "message": "Hey, in name of lady Liana, Im here to hear about your problems"
+    },
+    {
+      "name": "Drunken",
+      "message": "Hey, who are you? I dont know you, and you dont know anything about this city and its problems"
+    },
+    {
+      "name": "Traveler",
+      "message": "Yeah, well so tell me"
+    },
+    {
+      "name": "Drunken",
+      "message": "Taxes... thats what I have to tell you, we are rotting in here, and the taxes are too high"
+    },
+    {
+      "name": "Drunken",
+      "message": "This is no way of living, the royal family is just taking our money and we are not getting anything in return"
+    },
+    {
+      "name": "Drunken",
+      "message": "We work all day... I just want to drunk all day, but even the taverns are too expensive"
+    },
+    {
+      "name": "Traveler",
+      "message": "Okay, If you say so... I will tell lady Liana about this"
+    },
+    {
+      "name": "Drunken",
+      "message": "Thank you, I hope you can do something about this"
+    }
+  ],
+  [{ "name": "Drunken", "message": "Hey who are you?...." }]
+]

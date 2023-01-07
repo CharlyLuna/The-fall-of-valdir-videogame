@@ -1,0 +1,66 @@
+[
+  [
+    {
+      "name": "Merchant",
+      "message": "Hey you, I need some help... My name is Belmonth"
+    },
+    {
+      "name": "Traveler",
+      "message": "What can I do for you? Im just a simple traveler coming back home"
+    },
+    {
+      "name": "Belmonth",
+      "message": "Im really busy right now, but I need to deliver a message to Sir Erwin, could you do it for me?"
+    },
+    {
+      "name": "Traveler",
+      "message": "I think I can help...but where I can find him?"
+    },
+    {
+      "name": "Belmonth",
+      "message": "He is in the residencial zone of the city, you can find him in the last house of that zone"
+    },
+    {
+      "name": "Traveler",
+      "message": "And how am I supossed to go to that zone?"
+    },
+    {
+      "name": "Belmonth",
+      "message": "Thats on you"
+    },
+    {
+      "name": "Traveler",
+      "message": "And the message is...?"
+    },
+    {
+      "name": "Belmonth",
+      "message": "Tell him that: \"The merchant of the city is waiting for him to deliver the special thing he ordered\""
+    },
+    {
+      "name": "Traveler",
+      "message": "Special thing...?"
+    },
+    {
+      "name": "Belmonth",
+      "message": "He would understand"
+    },
+    {
+      "name": "Traveler",
+      "message": "Okay...I'll go to the residencial zone now"
+    }
+  ],
+  [
+    {
+      "name": "Belmonth",
+      "message": "Hey there, did you deliver the message?"
+    },
+    {
+      "name": "Traveler",
+      "message": "Not yet"
+    },
+    {
+      "name": "Belmonth",
+      "message": "Okay do it as soon as posible"
+    }
+  ]
+]

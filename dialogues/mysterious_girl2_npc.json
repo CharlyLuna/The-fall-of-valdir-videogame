@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Mysterious girl",
+    "message": "Hey, I see you want to cross the gate to the high zone, I can help you... for the right price of course."
+  },
+  { "name": "Traveler", "message": "Okay... better be worth it" },
+  { "name": "Mysterious girl", "message": "Perfect! you will not regret" },
+  {
+    "name": "Mysterious girl",
+    "message": "Now just wait a bit, i will distract the guards"
+  }
+]

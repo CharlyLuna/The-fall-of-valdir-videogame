@@ -1,0 +1,10 @@
+[
+  [
+    { "name": "Beggar", "message": "A traveler..." },
+    { "name": "Beggar", "message": "Im starving... please...food" }
+  ],
+  [
+    { "name": "Beggar", "message": "What else do you want from me?" },
+    { "name": "Beggar", "message": "Don't you see Im rotting in here?" }
+  ]
+]

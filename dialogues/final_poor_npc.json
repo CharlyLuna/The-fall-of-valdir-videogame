@@ -1,0 +1,16 @@
+[
+  [
+    { "name": "Beggar", "message": "Why are you here?" },
+    { "name": "Traveler", "message": "Im here in name of Lady Liana" },
+    { "name": "Beggar", "message": "She is using you, you know?" },
+    { "name": "Traveler", "message": "What do you mean?" },
+    {
+      "name": "Beggar",
+      "message": "It doesnt matter... Its not going to work, it nevers work"
+    },
+    { "name": "Traveler", "message": "I dont understand" },
+    { "name": "Beggar", "message": "Neither the last one..." },
+    { "name": "Beggar", "message": "Farewell" }
+  ],
+  [{ "name": "Beggar", "message": "Go now, you are a servant like us" }]
+]

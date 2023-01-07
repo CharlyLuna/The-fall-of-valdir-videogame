@@ -1,0 +1,27 @@
+[
+  [
+    {
+      "name": "Mysterious girl",
+      "message": "Hey, veo que quieres pasar a la zona alta, podria ayudarte con eso.. por el precio adecuado"
+    }
+  ],
+  [
+    {
+      "name": "Mysterious girl",
+      "message": "Es una lastima... cuando cambies de opinion, estare aqui"
+    }
+  ],
+  [
+    {
+      "name": "Mysterious girl",
+      "message": "Has cambiado de opinion sobre mi oferta?"
+    }
+  ],
+  [
+    { "name": "Mysterious girl", "message": "Perfecto, no te arrepentiras" },
+    {
+      "name": "Mysterious girl",
+      "message": "Ahora solo espera y pasa mientras los distraigo"
+    }
+  ]
+]

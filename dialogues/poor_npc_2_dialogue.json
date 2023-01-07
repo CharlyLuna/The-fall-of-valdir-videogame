@@ -1,0 +1,34 @@
+[
+  [
+    {
+      "name": "Beggar",
+      "message": "You again... Have you had enough of this place?"
+    },
+    {
+      "name": "Traveler",
+      "message": "This is not the place I remember... this used to be a good place to live"
+    },
+    { "name": "Beggar", "message": "There has been a long time since that..." },
+    {
+      "name": "Traveler",
+      "message": "Why doesn't anyone ask for an audience with the king?"
+    },
+    {
+      "name": "Beggar",
+      "message": "An audience with the king?? We? hahahha... don't make me laugh, we are nothing for them"
+    },
+    {
+      "name": "Traveler",
+      "message": "Something has to be done... You can't live like that"
+    },
+    {
+      "name": "Beggar",
+      "message": "It is what it is... nothing can do anything"
+    },
+    {
+      "name": "Beggar",
+      "message": "And you... you are just a little traveler with no home"
+    }
+  ],
+  [{ "name": "Beggar", "message": "Go away from here while you can..." }]
+]

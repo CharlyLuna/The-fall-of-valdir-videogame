@@ -1,0 +1,32 @@
+[
+  [
+    { "name": "Belmonth", "message": "Hey you, have you done it?" },
+    { "name": "Traveler", "message": "Yes I have... he will come to see you" },
+    {
+      "name": "Belmonth",
+      "message": "Wonderful, I really appreciate your kindness..."
+    },
+    {
+      "name": "Belmonth",
+      "message": "And you didn't even ask for money, you are really different from the others"
+    },
+    {
+      "name": "Traveler",
+      "message": "I don't need money, I just wanted to help you"
+    },
+    {
+      "name": "Belmonth",
+      "message": "And for that, you have my eternal gratitude"
+    },
+    {
+      "name": "Traveler",
+      "message": "Well, I have to go now, I have a lot of things to do"
+    },
+    { "name": "Belmonth", "message": "Ok, see you later" }
+  ],
+  [
+    { "name": "Belmonth", "message": "Hey there you are! How is it going?" },
+    { "name": "Traveler", "message": "Everything is fine, thank you" },
+    { "name": "Belmonth", "message": "Keep it that way" }
+  ]
+]

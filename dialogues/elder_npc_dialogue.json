@@ -1,0 +1,17 @@
+[
+  [
+    { "name": "Elder", "message": "A new face..." },
+    { "name": "Elder", "message": "The new ones doesnt last much in here" },
+    { "name": "Traveler", "message": "..." },
+    {
+      "name": "Elder",
+      "message": "We are starving to death, and of course we still have to pay to the royalty"
+    },
+    {
+      "name": "Elder",
+      "message": "And for what? We are not considered by no one, we don't exist"
+    },
+    { "name": "Elder", "message": "Whatever... keep going, follow your path" }
+  ],
+  [{ "name": "Elder", "message": "Be careful out there" }]
+]

@@ -1,0 +1,39 @@
+[
+  [
+    {
+      "name": "Sir Erwin",
+      "message": "Hey you little scum, what are you doing in here?"
+    },
+    {
+      "name": "Sir Erwin",
+      "message": "Surely you are lost, go back to where you came from"
+    },
+    { "name": "Traveler", "message": "Im here to deliver you a message..." },
+    {
+      "name": "Sir Erwin",
+      "message": "Speak then, I don't have much time to speak to something like you"
+    },
+    {
+      "name": "Traveler",
+      "message": "The merchant of the city is waiting for you to deliver you the \"special thing\""
+    },
+    {
+      "name": "Sir Erwin",
+      "message": "Oh I see, that idiot, he is always late, I will go and see him"
+    },
+    {
+      "name": "Sir Erwin",
+      "message": "Now get out of here, I don't want to see you again... "
+    },
+    {
+      "name": "Traveler",
+      "message": "charming... I will leave then"
+    }
+  ],
+  [
+    {
+      "name": "Sir Erwin",
+      "message": "Why are you still here? I told you to leave"
+    }
+  ]
+]

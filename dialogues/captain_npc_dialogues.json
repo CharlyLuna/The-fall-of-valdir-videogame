@@ -1,0 +1,24 @@
+[
+  [
+    {
+      "name": "Knight",
+      "message": "Hey you! Im Sir Dorian, the knight of Lady Liana, she has summoned you"
+    },
+    {
+      "name": "Sir Dorian",
+      "message": "You must go with her, she is in the zone next to the gate"
+    },
+    { "name": "Sir Dorian", "message": "She will tell you what to do" },
+    { "name": "Traveler", "message": "Why me? I dont even know her" },
+    {
+      "name": "Sir Dorian",
+      "message": "She has chosen you, thats all what you need to know, you must go with her"
+    },
+    { "name": "Traveler", "message": "Ok, I will go with her" },
+    {
+      "name": "Sir Dorian",
+      "message": "Good, now go... the guards will let you pass"
+    }
+  ],
+  [{ "name": "Sir Dorian", "message": "Dont look at me, go to see lady Liana" }]
+]

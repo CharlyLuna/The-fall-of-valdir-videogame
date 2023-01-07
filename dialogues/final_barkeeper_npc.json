@@ -1,0 +1,38 @@
+[
+  [
+    { "name": "Traveler", "message": "Hey, Im here in name of Lady Liana" },
+    {
+      "name": "Traveler",
+      "message": "I want to know about your problems, it is the time for justice"
+    },
+    {
+      "name": "Traveler",
+      "message": "Lady Liana will make an audience with the king"
+    },
+    {
+      "name": "Barkeeper",
+      "message": "Hmmm... an audience with the king? I don't know if he will be interested in our problems"
+    },
+    {
+      "name": "Barkeeper",
+      "message": "But I can tell you that everything here is going wrong, the king is not listening to us"
+    },
+    {
+      "name": "Barkeeper",
+      "message": "We are just minions for him, he doesn't care about us"
+    },
+    {
+      "name": "Barkeeper",
+      "message": "He is just interested in his own pleasure, he doesn't care about the people, as long as they pay taxes"
+    },
+    {
+      "name": "Barkeeper",
+      "message": "God save us from this king"
+    },
+    {
+      "name": "Traveler",
+      "message": "I will communicate your words to Lady Liana"
+    }
+  ],
+  [{ "name": "Barkeeper", "message": "Hope that audience will do some good" }]
+]

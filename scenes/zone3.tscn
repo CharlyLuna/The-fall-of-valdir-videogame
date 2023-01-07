@@ -1,0 +1,576 @@
+[gd_scene load_steps=40 format=2]
+
+[ext_resource path="res://assets/tiles/environment/rich_area_tileset/houses_rich_game.png" type="Texture" id=1]
+[ext_resource path="res://assets/tiles/environment/layers/sliced-tileset/ground.png" type="Texture" id=2]
+[ext_resource path="res://scenes/characters/midBornPlayer.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/tiles/environment/layers/sliced-tileset/ground-b.png" type="Texture" id=4]
+[ext_resource path="res://assets/background/background.png" type="Texture" id=5]
+[ext_resource path="res://assets/background/middleground.png" type="Texture" id=6]
+[ext_resource path="res://scripts/levels.gd" type="Script" id=7]
+[ext_resource path="res://assets/tiles/environment/layers/sliced-tileset/wall.png" type="Texture" id=8]
+[ext_resource path="res://assets/tiles/environment/layers/sliced-tileset/window.png" type="Texture" id=9]
+[ext_resource path="res://assets/tiles/environment/layers/sliced-tileset/shadow.png" type="Texture" id=10]
+[ext_resource path="res://assets/tiles/environment/layers/sliced-tileset/wall-b.png" type="Texture" id=11]
+[ext_resource path="res://assets/tiles/environment/layers/sliced-tileset/left-corner.png" type="Texture" id=12]
+[ext_resource path="res://assets/tiles/environment/layers/sliced-tileset/ground-wall-b.png" type="Texture" id=13]
+[ext_resource path="res://assets/tiles/environment/layers/sliced-tileset/ground-wall.png" type="Texture" id=14]
+[ext_resource path="res://assets/tiles/environment/layers/sliced-tileset/right-corner.png" type="Texture" id=15]
+[ext_resource path="res://assets/tiles/environment/layers/sliced-tileset/ground-corner.png" type="Texture" id=16]
+[ext_resource path="res://assets/tiles/environment/layers/sliced-tileset/ground-right-corner.png" type="Texture" id=17]
+[ext_resource path="res://scenes/objects/key_e.tscn" type="PackedScene" id=18]
+[ext_resource path="res://scripts/objects/doorToZ2From3.gd" type="Script" id=19]
+[ext_resource path="res://scenes/characters/princess_npc.tscn" type="PackedScene" id=20]
+[ext_resource path="res://scenes/characters/bard_npc.tscn" type="PackedScene" id=21]
+[ext_resource path="res://scenes/characters/dog.tscn" type="PackedScene" id=22]
+[ext_resource path="res://scenes/characters/jester_npc.tscn" type="PackedScene" id=23]
+[ext_resource path="res://scenes/characters/knight_npc.tscn" type="PackedScene" id=24]
+[ext_resource path="res://assets/tiles/environment/props/props.png" type="Texture" id=25]
+[ext_resource path="res://scripts/npc/knight_npc.gd" type="Script" id=26]
+[ext_resource path="res://scenes/objects/dialogue.tscn" type="PackedScene" id=27]
+[ext_resource path="res://scenes/objects/thought_hint.tscn" type="PackedScene" id=28]
+[ext_resource path="res://scenes/objects/finished_game_message.tscn" type="PackedScene" id=29]
+[ext_resource path="res://assets/UI/quest_asset.png" type="Texture" id=30]
+[ext_resource path="res://assets/UI/fonts/CompassPro.ttf" type="DynamicFontData" id=31]
+[ext_resource path="res://scripts/objects/hint_text_f_quest.gd" type="Script" id=32]
+
+[sub_resource type="TileSet" id=18]
+0/name = "house1"
+0/texture = ExtResource( 1 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 224, 272 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "house2"
+1/texture = ExtResource( 1 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 240, 0, 208, 256 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+
+[sub_resource type="TileSet" id=17]
+0/name = "wall"
+0/texture = ExtResource( 8 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 16, 16 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "wall2"
+1/texture = ExtResource( 11 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 16, 16 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "floor"
+2/texture = ExtResource( 4 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 0, 16, 48 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "wall_groundL"
+3/texture = ExtResource( 16 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 0, 0, 48, 32 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "wall_groundR"
+4/texture = ExtResource( 17 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 0, 0, 16, 32 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "ground_wall"
+5/texture = ExtResource( 13 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 0, 0, 48, 32 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "ground_wall2"
+6/texture = ExtResource( 14 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 0, 0, 32, 32 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
+7/name = "door"
+7/texture = ExtResource( 9 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 0, 0, 32, 64 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape_one_way = false
+7/shape_one_way_margin = 0.0
+7/shapes = [  ]
+7/z_index = 0
+8/name = "right_corner"
+8/texture = ExtResource( 15 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 0, 0, 16, 32 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape_one_way = false
+8/shape_one_way_margin = 0.0
+8/shapes = [  ]
+8/z_index = 0
+9/name = "shadow"
+9/texture = ExtResource( 10 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( 0, 0, 16, 32 )
+9/tile_mode = 0
+9/occluder_offset = Vector2( 0, 0 )
+9/navigation_offset = Vector2( 0, 0 )
+9/shape_offset = Vector2( 0, 0 )
+9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+9/shape_one_way = false
+9/shape_one_way_margin = 0.0
+9/shapes = [  ]
+9/z_index = 0
+10/name = "left_corner"
+10/texture = ExtResource( 12 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 0, 0, 32, 32 )
+10/tile_mode = 0
+10/occluder_offset = Vector2( 0, 0 )
+10/navigation_offset = Vector2( 0, 0 )
+10/shape_offset = Vector2( 0, 0 )
+10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+10/shape_one_way = false
+10/shape_one_way_margin = 0.0
+10/shapes = [  ]
+10/z_index = 0
+
+[sub_resource type="TileSet" id=16]
+0/name = "sign"
+0/texture = ExtResource( 25 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 112, 16, 48, 48 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "barrel"
+1/texture = ExtResource( 25 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 160, 32, 48, 32 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "box"
+2/texture = ExtResource( 25 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 16, 96, 48, 48 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "boxes"
+3/texture = ExtResource( 25 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 16, 0, 80, 80 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "lights"
+4/texture = ExtResource( 25 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 224, 48, 32, 112 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "hey_car"
+5/texture = ExtResource( 25 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 96, 80, 112, 80 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "well"
+6/texture = ExtResource( 25 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 256, 80, 80, 80 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
+
+[sub_resource type="TileSet" id=19]
+0/name = "ground"
+0/texture = ExtResource( 2 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 16, 48 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "ground-b"
+1/texture = ExtResource( 4 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 16, 48 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+
+[sub_resource type="RectangleShape2D" id=20]
+extents = Vector2( 10, 29 )
+
+[sub_resource type="RectangleShape2D" id=22]
+extents = Vector2( 13, 26.5 )
+
+[sub_resource type="DynamicFont" id=23]
+font_data = ExtResource( 31 )
+
+[node name="zone3" type="Node2D"]
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_horizontal_guides_": [  ],
+"_edit_vertical_guides_": [ 1552.0 ]
+}
+
+[node name="houses" type="TileMap" parent="."]
+position = Vector2( 0, -8 )
+tile_set = SubResource( 18 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 1245189, 0, 0, 1245217, 0, 0, 1245259, 0, 0, 1310740, 1, 0, 1310768, 1, 0, 1310782, 1, 0 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="walls" type="TileMap" parent="."]
+position = Vector2( 0, -8 )
+tile_set = SubResource( 17 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 786525, 9, 0, 786526, 9, 0, 786527, 0, 0, 786528, 0, 0, 851968, 0, 0, 851969, 0, 0, 851970, 0, 0, 851971, 0, 0, 852063, 0, 0, 852064, 0, 0, 917504, 0, 0, 917505, 0, 0, 917506, 0, 0, 917507, 0, 0, 917597, 9, 0, 917598, 9, 0, 917599, 0, 0, 917600, 0, 0, 983040, 0, 0, 983041, 0, 0, 983042, 0, 0, 983043, 0, 0, 983135, 0, 0, 983136, 0, 0, 1048576, 0, 0, 1048577, 0, 0, 1048578, 0, 0, 1048579, 0, 0, 1048669, 9, 0, 1048670, 9, 0, 1048671, 0, 0, 1048672, 0, 0, 1114112, 1, 0, 1114113, 0, 0, 1114114, 0, 0, 1114115, 0, 0, 1114207, 0, 0, 1114208, 0, 0, 1179648, 0, 0, 1179649, 0, 0, 1179650, 0, 0, 1179651, 0, 0, 1179741, 9, 0, 1179742, 9, 0, 1179743, 0, 0, 1179744, 0, 0, 1245184, 0, 0, 1245185, 0, 0, 1245186, 0, 0, 1245187, 0, 0, 1245279, 0, 0, 1245280, 0, 0, 1310720, 1, 0, 1310721, 0, 0, 1310722, 0, 0, 1310723, 8, 0, 1310813, 9, 0, 1310814, 9, 0, 1310815, 0, 0, 1310816, 0, 0, 1376256, 0, 0, 1376257, 0, 0, 1376258, 0, 0, 1376351, 0, 0, 1376352, 0, 0, 1441792, 0, 0, 1441793, 0, 0, 1441794, 0, 0, 1441795, 0, 0, 1441885, 9, 0, 1441886, 9, 0, 1441887, 0, 0, 1441888, 0, 0, 1507328, 0, 0, 1507329, 0, 0, 1507330, 0, 0, 1507331, 0, 0, 1507423, 0, 0, 1507424, 0, 0, 1572864, 0, 0, 1572865, 0, 0, 1572866, 0, 0, 1572867, 0, 0, 1572957, 9, 0, 1572958, 9, 0, 1572959, 0, 0, 1572960, 0, 0, 1638400, 0, 0, 1638401, 0, 0, 1638402, 0, 0, 1638403, 0, 0, 1638495, 0, 0, 1638496, 0, 0, 1703936, 1, 0, 1703937, 0, 0, 1703938, 0, 0, 1703939, 8, 0, 1704029, 9, 0, 1704030, 9, 0, 1704031, 0, 0, 1704032, 0, 0, 1769472, 0, 0, 1769473, 0, 0, 1769474, 0, 0, 1769567, 0, 0, 1769568, 0, 0, 1835008, 0, 0, 1835009, 0, 0, 1835010, 0, 0, 1835011, 0, 0, 1835101, 9, 0, 1835102, 9, 0, 1835103, 0, 0, 1835104, 0, 0, 1900544, 0, 0, 1900545, 0, 0, 1900546, 0, 0, 1900547, 0, 0, 1900639, 0, 0, 1900640, 0, 0, 1966080, 0, 0, 1966081, 0, 0, 1966082, 0, 0, 1966083, 0, 0, 1966173, 9, 0, 1966174, 9, 0, 1966175, 0, 0, 1966176, 0, 0, 2031616, 0, 0, 2031617, 0, 0, 2031618, 0, 0, 2031619, 0, 0, 2031711, 0, 0, 2031712, 0, 0, 2097152, 0, 0, 2097153, 7, 0, 2097155, 0, 0, 2097245, 9, 0, 2097246, 9, 0, 2097247, 0, 0, 2097248, 0, 0, 2162688, 0, 0, 2162691, 0, 0, 2162783, 0, 0, 2162784, 0, 0, 2228224, 0, 0, 2228227, 0, 0, 2228317, 9, 0, 2228318, 9, 0, 2228319, 0, 0, 2228320, 0, 0, 2293760, 0, 0, 2293763, 0, 0, 2293855, 0, 0, 2293856, 0, 0 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="props" type="TileMap" parent="."]
+tile_set = SubResource( 16 )
+cell_size = Vector2( 16, 16 )
+format = 1
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="floor" type="TileMap" parent="."]
+position = Vector2( 0, -8 )
+tile_set = SubResource( 19 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 2293760, 0, 0, 2293761, 0, 0, 2293762, 1, 0, 2293763, 1, 0, 2293764, 1, 0, 2293765, 1, 0, 2293766, 0, 0, 2293767, 0, 0, 2293768, 0, 0, 2293769, 0, 0, 2293770, 0, 0, 2293771, 0, 0, 2293772, 0, 0, 2293773, 0, 0, 2293774, 0, 0, 2293775, 0, 0, 2293776, 0, 0, 2293777, 0, 0, 2293778, 0, 0, 2293779, 1, 0, 2293780, 0, 0, 2293781, 0, 0, 2293782, 1, 0, 2293783, 1, 0, 2293784, 0, 0, 2293785, 0, 0, 2293786, 1, 0, 2293787, 0, 0, 2293788, 0, 0, 2293789, 1, 0, 2293790, 1, 0, 2293791, 1, 0, 2293792, 0, 0, 2293793, 1, 0, 2293794, 0, 0, 2293795, 1, 0, 2293796, 0, 0, 2293797, 1, 0, 2293798, 0, 0, 2293799, 1, 0, 2293800, 0, 0, 2293801, 1, 0, 2293802, 1, 0, 2293803, 1, 0, 2293804, 0, 0, 2293805, 0, 0, 2293806, 1, 0, 2293807, 1, 0, 2293808, 0, 0, 2293809, 0, 0, 2293810, 0, 0, 2293811, 0, 0, 2293812, 0, 0, 2293813, 0, 0, 2293814, 0, 0, 2293815, 0, 0, 2293816, 1, 0, 2293817, 0, 0, 2293818, 0, 0, 2293819, 0, 0, 2293820, 1, 0, 2293821, 1, 0, 2293822, 0, 0, 2293823, 0, 0, 2293824, 0, 0, 2293825, 0, 0, 2293826, 1, 0, 2293827, 0, 0, 2293828, 1, 0, 2293829, 1, 0, 2293830, 0, 0, 2293831, 1, 0, 2293832, 1, 0, 2293833, 0, 0, 2293834, 1, 0, 2293835, 1, 0, 2293836, 0, 0, 2293837, 1, 0, 2293838, 0, 0, 2293839, 0, 0, 2293840, 1, 0, 2293841, 0, 0, 2293842, 1, 0, 2293843, 0, 0, 2293844, 1, 0, 2293845, 0, 0, 2293846, 0, 0, 2293847, 1, 0, 2293848, 0, 0, 2293849, 0, 0, 2293850, 0, 0, 2293851, 1, 0, 2293852, 0, 0, 2293853, 0, 0, 2293854, 0, 0, 2293855, 1, 0, 2293856, 0, 0 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="cielo" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.2, 1 )
+motion_mirroring = Vector2( 576, 0 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/cielo"]
+position = Vector2( 288, 384 )
+scale = Vector2( 1.5, 1.4 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="casas" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.4, 1 )
+motion_mirroring = Vector2( 768, 0 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/casas"]
+position = Vector2( 0, 256 )
+scale = Vector2( 1, 1.1 )
+texture = ExtResource( 6 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 768, 288 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="barrier" type="StaticBody2D" parent="."]
+position = Vector2( 1560, 552 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="barrier"]
+position = Vector2( 0, -19 )
+shape = SubResource( 20 )
+
+[node name="barrier2" type="StaticBody2D" parent="."]
+position = Vector2( -8, 560 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="barrier2"]
+position = Vector2( 0, -19 )
+shape = SubResource( 20 )
+
+[node name="zone2Pos" type="Position2D" parent="."]
+position = Vector2( 32, 548 )
+
+[node name="zone2" type="Area2D" parent="."]
+position = Vector2( 32, 552 )
+script = ExtResource( 19 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="zone2"]
+position = Vector2( 0, -16.5 )
+shape = SubResource( 22 )
+
+[node name="key_e" parent="zone2" instance=ExtResource( 18 )]
+visible = true
+position = Vector2( 0, -56 )
+scale = Vector2( 1.1, 1.2 )
+
+[node name="princess_npc" parent="." instance=ExtResource( 20 )]
+position = Vector2( 799, 545 )
+scale = Vector2( 1.3, 1.3 )
+
+[node name="key_e" parent="princess_npc" instance=ExtResource( 18 )]
+position = Vector2( 0.769226, -23.8462 )
+scale = Vector2( 0.7, 0.8 )
+
+[node name="dialogue" parent="princess_npc" instance=ExtResource( 27 )]
+dialogue_file = "res://dialogues/lady_npc_dialogues.json"
+
+[node name="interactable_sign" type="Sprite" parent="princess_npc"]
+visible = false
+position = Vector2( 0, -27.6924 )
+scale = Vector2( 0.333333, 0.333333 )
+texture = ExtResource( 30 )
+
+[node name="bard_npc" parent="." instance=ExtResource( 21 )]
+position = Vector2( 731, 545 )
+scale = Vector2( 1.2, 1.2 )
+
+[node name="dialogue" parent="bard_npc" instance=ExtResource( 27 )]
+dialogue_file = "res://dialogues/bard_npc_dialogues.json"
+
+[node name="key_e" parent="bard_npc" instance=ExtResource( 18 )]
+position = Vector2( 2.5, -27.5 )
+scale = Vector2( 0.7, 0.8 )
+
+[node name="dog" parent="." instance=ExtResource( 22 )]
+position = Vector2( 511, 544 )
+scale = Vector2( 1.2, 1.2 )
+
+[node name="dialogue" parent="dog" instance=ExtResource( 27 )]
+dialogue_file = "res://dialogues/dog_npc_dialogues.json"
+
+[node name="key_e" parent="dog" instance=ExtResource( 18 )]
+position = Vector2( 0, -18.3333 )
+scale = Vector2( 0.7, 0.8 )
+
+[node name="jester_npc" parent="." instance=ExtResource( 23 )]
+position = Vector2( 699, 547 )
+scale = Vector2( 1.2, 1.2 )
+
+[node name="knight_npc" parent="." instance=ExtResource( 24 )]
+position = Vector2( 1228, 545 )
+scale = Vector2( 1.2, 1.2 )
+script = ExtResource( 26 )
+
+[node name="key_e" parent="knight_npc" instance=ExtResource( 18 )]
+position = Vector2( 0, -27.5 )
+scale = Vector2( 0.7, 0.8 )
+
+[node name="dialogue" parent="knight_npc" instance=ExtResource( 27 )]
+dialogue_file = "res://dialogues/knight_npc_dialogue.json"
+
+[node name="interactable_sign" type="Sprite" parent="knight_npc"]
+visible = false
+position = Vector2( -1.66663, -31.6666 )
+scale = Vector2( 0.333333, 0.333333 )
+texture = ExtResource( 30 )
+
+[node name="player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 32, 548 )
+scale = Vector2( 0.85, 0.85 )
+
+[node name="thought_hint" parent="player" instance=ExtResource( 28 )]
+margin_left = -26.0
+margin_top = -116.0
+margin_right = 228.0
+margin_bottom = -47.0
+
+[node name="quest_finished" type="Timer" parent="player"]
+wait_time = 4.0
+
+[node name="finished_game_message" parent="player" instance=ExtResource( 29 )]
+margin_left = -150.588
+margin_top = -248.235
+margin_right = 199.412
+margin_bottom = -148.235
+
+[node name="RichTextLabel" type="RichTextLabel" parent="player"]
+visible = false
+margin_left = -152.941
+margin_top = -150.588
+margin_right = 146.059
+margin_bottom = -96.5882
+custom_fonts/normal_font = SubResource( 23 )
+text = "You should go to the workers district and the slums (poor zone)"
+script = ExtResource( 32 )
+
+[node name="Timer" type="Timer" parent="player/RichTextLabel"]
+wait_time = 3.0
+
+[connection signal="body_entered" from="zone2" to="zone2" method="_on_zone2_body_entered"]
+[connection signal="body_exited" from="zone2" to="zone2" method="_on_zone2_body_exited"]
+[connection signal="final_quest_accepted" from="princess_npc/dialogue" to="player/RichTextLabel" method="_on_dialogue_final_quest_accepted"]
+[connection signal="finished_game" from="princess_npc/dialogue" to="player/finished_game_message" method="_on_dialogue_finished_game"]
+[connection signal="body_entered" from="knight_npc" to="knight_npc" method="_on_knight_npc_body_entered"]
+[connection signal="body_exited" from="knight_npc" to="knight_npc" method="_on_knight_npc_body_exited"]
+[connection signal="finished_z3_quest" from="knight_npc/dialogue" to="knight_npc" method="_on_dialogue_finished_z3_quest"]
+[connection signal="finished_z3_quest" from="knight_npc/dialogue" to="player" method="_on_dialogue_finished_z3_quest"]
+[connection signal="timeout" from="player/quest_finished" to="player" method="_on_quest_finished_timeout"]
+[connection signal="timeout" from="player/RichTextLabel/Timer" to="player/RichTextLabel" method="_on_Timer_timeout"]

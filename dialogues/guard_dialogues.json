@@ -1,0 +1,18 @@
+[
+  [
+    {
+      "name": "guard",
+      "message": "Hey, stop right there you little minion, this area is only for highborn people"
+    },
+    {
+      "name": "guard",
+      "message": "So now, go back to where you came from minion"
+    }
+  ],
+  [
+    {
+      "name": "guard",
+      "message": "Still here? you can't not pass...are you deaf?"
+    }
+  ]
+]

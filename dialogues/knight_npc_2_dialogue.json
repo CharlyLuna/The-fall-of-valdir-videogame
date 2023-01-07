@@ -1,0 +1,30 @@
+[
+  [
+    {
+      "name": "Sir Erwin",
+      "message": "So you are back? The guards should not let pass people like you"
+    },
+    {
+      "name": "Traveler",
+      "message": "Im here to see lady Liana"
+    },
+    {
+      "name": "Sir Erwin",
+      "message": "Are you? Lady Liana is a beggar lover, Im surprised she is still part of the royal family"
+    },
+    {
+      "name": "Traveler",
+      "message": "I dont care what you think, I just want to see her"
+    },
+    {
+      "name": "Sir Erwin",
+      "message": "Then go with here, I dont have time for you"
+    }
+  ],
+  [
+    {
+      "name": "Sir Erwin",
+      "message": "Why are you still bothering me? little minion..."
+    }
+  ]
+]

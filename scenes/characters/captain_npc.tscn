@@ -1,0 +1,31 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assets/characters/NPC/individual sprites/captain/captain_2.png" type="Texture" id=1]
+[ext_resource path="res://assets/characters/NPC/individual sprites/captain/captain_1.png" type="Texture" id=2]
+[ext_resource path="res://assets/characters/NPC/individual sprites/captain/captain_3.png" type="Texture" id=3]
+[ext_resource path="res://assets/characters/NPC/individual sprites/captain/captain_4.png" type="Texture" id=4]
+[ext_resource path="res://scripts/npc/captain_npc.gd" type="Script" id=5]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 12.0
+height = 8.0
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 1 ), ExtResource( 3 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="captain_npc" type="Area2D"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 2 )
+
+[connection signal="body_entered" from="." to="." method="_on_captain_npc_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_captain_npc_body_exited"]

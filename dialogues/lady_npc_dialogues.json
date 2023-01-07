@@ -1,0 +1,65 @@
+[
+  [
+    {
+      "name": "Lady Liana",
+      "message": "Hello! thank you for accepting to come here"
+    },
+    { "name": "Traveler", "message": "It's not like I have a choice" },
+    {
+      "name": "Lady Liana",
+      "message": "Well I hope Sir Dorian wasnt rude with you, I need your help for an important task"
+    },
+    { "name": "Traveler", "message": "What kind of task?" },
+    {
+      "name": "Lady Liana",
+      "message": "I always have considered that all the citizens in Valdir should live with equal conditions"
+    },
+    {
+      "name": "Lady Liana",
+      "message": "However although I think like that, great part of the nobility dont think the same"
+    },
+    {
+      "name": "Traveler",
+      "message": "And what do I have to do with all of this? Im just a simple traveler"
+    },
+    {
+      "name": "Lady Liana",
+      "message": "Well, Im not allowed to go to the workers district or the slums, but you can"
+    },
+    {
+      "name": "Lady Liana",
+      "message": "So I need you to speak on my behalf with the citizens"
+    },
+    { "name": "Traveler", "message": "And what should I tell them?" },
+    {
+      "name": "Lady Liana",
+      "message": "Ask them for their problems in the city, the things that they need..."
+    },
+    {
+      "name": "Lady Liana",
+      "message": "And tell them that Im going to make an audience with the king"
+    },
+    {
+      "name": "Traveler",
+      "message": "Wow so maybe there is a solution to all of this poverty and inequality"
+    },
+    {
+      "name": "Lady Liana",
+      "message": "I hope so, but I need to know what the people think"
+    },
+    { "name": "Traveler", "message": "Ok, I will do it" },
+    {
+      "name": "Lady Liana",
+      "message": "Thank you so much, I will wait for your return"
+    },
+    { "name": "Traveler", "message": "I will be back soon" }
+  ],
+  [
+    { "name": "Lady Liana", "message": "Have you done what I asked?" },
+    { "name": "Traveler", "message": "Not yet, but I will my lady" },
+    {
+      "name": "Lady Liana",
+      "message": "Thank you, I will be waiting for you here"
+    }
+  ]
+]

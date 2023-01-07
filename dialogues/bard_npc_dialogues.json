@@ -1,0 +1,32 @@
+[
+  [
+    {
+      "name": "Bard",
+      "message": "Hey, what are you doing here? don't mess out or I would lose my job"
+    },
+    {
+      "name": "Bard",
+      "message": "You should leave, this is no place for minions, Im one of the lucky ones that can stay here"
+    },
+    { "name": "Traveler", "message": "Im just passing by" },
+    {
+      "name": "Bard",
+      "message": "Better be quickly, the royalty doesn't like people like us"
+    }
+  ],
+  [
+    {
+      "name": "Bard",
+      "message": "Still here? Im starting to think that you are one of the lucky ones too"
+    },
+    {
+      "name": "Traveler",
+      "message": "I'm not sure if I should be happy or sad about that"
+    },
+    {
+      "name": "Bard",
+      "message": "I'm not sure either, but I think you should leave before the guards come"
+    },
+    { "name": "Traveler", "message": "See you later then" }
+  ]
+]

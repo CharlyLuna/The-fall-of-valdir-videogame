@@ -1,0 +1,44 @@
+[
+  [
+    { "name": "Traveler", "message": "What happened here?" },
+    {
+      "name": "Beggar",
+      "message": "The fall of the great Valdir is what happened"
+    },
+    {
+      "name": "Traveler",
+      "message": "All of the city is in this state?"
+    },
+    {
+      "name": "Beggar",
+      "message": "Hmmm I see you are one of us... okay I will tell you"
+    },
+    {
+      "name": "Beggar",
+      "message": "Basically since the ascent of Almeric II everything has become a hellhole"
+    },
+    {
+      "name": "Beggar",
+      "message": "The rich are even more rich and we are sinking in debts and diseases but no one cares"
+    },
+    {
+      "name": "Beggar",
+      "message": "There are more of us every week, and the city is getting more and more dangerous"
+    },
+    {
+      "name": "Beggar",
+      "message": "Anyway, if you want to see less desolate areas I recommend you to go to the workers distric up ahead"
+    },
+    { "name": "Traveler", "message": "Well I will go there then" },
+    {
+      "name": "Beggar",
+      "message": "Be careful man...In this city you can't trust anyone"
+    }
+  ],
+  [
+    {
+      "name": "Pordiocero",
+      "message": "Remember, don't trust anyone in this city"
+    }
+  ]
+]

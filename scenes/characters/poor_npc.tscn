@@ -1,0 +1,39 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://scripts/npc/poor_npc.gd" type="Script" id=1]
+[ext_resource path="res://assets/characters/NPC/individual sprites/beggar/beggar_01.png" type="Texture" id=2]
+[ext_resource path="res://assets/characters/NPC/individual sprites/beggar/beggar_00.png" type="Texture" id=3]
+[ext_resource path="res://assets/characters/NPC/individual sprites/beggar/beggar_04.png" type="Texture" id=4]
+[ext_resource path="res://assets/characters/NPC/individual sprites/beggar/beggar_03.png" type="Texture" id=5]
+[ext_resource path="res://assets/characters/NPC/individual sprites/beggar/beggar_02.png" type="Texture" id=6]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 2 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 10.8864
+height = 10.2434
+
+[node name="poor_npc" type="Area2D"]
+collision_layer = 8
+collision_mask = 8
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+frame = 4
+playing = true
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 2, 4 )
+rotation = -1.56209
+shape = SubResource( 2 )
+
+[connection signal="body_entered" from="." to="." method="_on_poor_npc_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_poor_npc_body_exited"]

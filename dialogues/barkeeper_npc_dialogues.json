@@ -1,0 +1,24 @@
+[
+  [
+    {
+      "name": "Barkeeper",
+      "message": "Hmmm... if you dont have any money get out of here"
+    },
+    {
+      "name": "Barkeeper",
+      "message": "It's nothing personal but in this place people are a smarty-pants when it comes to pay for something"
+    },
+    { "name": "Traveler", "message": "I see... I'll be back later" },
+    {
+      "name": "Barkeeper",
+      "message": "Ok, but don't forget to bring some money with you"
+    }
+  ],
+  [
+    { "name": "Barkeeper", "message": "Hey, you again!" },
+    { "name": "Traveler", "message": "Yes, I'm back" },
+    { "name": "Barkeeper", "message": "So, you want something to drink?" },
+    { "name": "Traveler", "message": "I'm good thank you" },
+    { "name": "Barkeeper", "message": "Okay, see you later then" }
+  ]
+]

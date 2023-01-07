@@ -1,0 +1,40 @@
+[
+  [
+    { "name": "Traveler", "message": "My lady, the task is done" },
+    {
+      "name": "Lady Liana",
+      "message": "Good to hear that, so what does the people say?"
+    },
+    {
+      "name": "Traveler",
+      "message": "They need better conditions to live, and for that they need less taxes"
+    },
+    {
+      "name": "Traveler",
+      "message": "All they do is serve, but they are not compensated as they should"
+    },
+    {
+      "name": "Lady Liana",
+      "message": "I see... I will talk to the king about this, but I can't promise anything"
+    },
+    {
+      "name": "Traveler",
+      "message": "You need to try hard my lady, all this people is starving and sinking in taxes and taxes"
+    },
+    {
+      "name": "Lady Liana",
+      "message": "You know.. you should come with me to the king, I think he will listen to you"
+    },
+    { "name": "Traveler", "message": "Me? but Im just a traveler..." },
+    {
+      "name": "Lady Liana",
+      "message": "And for that I think you will be heard, come with me"
+    }
+  ],
+  [
+    {
+      "name": "Lady Liana",
+      "message": "Thank you for everything, we will talk to the king about this"
+    }
+  ]
+]
