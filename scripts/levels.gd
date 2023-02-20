@@ -17,18 +17,21 @@ func _ready():
 
 	if self.name == "Main":
 		camera = get_node("player/Camera2D")
-		camera.limit_right = 1400
+		camera.limit_right = 2064
 	elif self.name == "zone2":
 		camera = get_node("player/Camera2D")
 		camera.limit_right = 1855
 	elif self.name == "zone3":
 		camera = get_node("player/Camera2D")
 		camera.limit_right = 1550
+	elif self.name == "secundaryZone":
+		camera = get_node("player/Camera2D")
+		camera.limit_right = 2096
 
 func _process(delta):
 	if self.name == "Main":
 		camera = get_node("player/Camera2D")
-		camera.limit_right = 1400
+		camera.limit_right = 2064
 	elif self.name == "zone2":
 		camera = get_node("player/Camera2D")
 		camera.limit_right = 1855

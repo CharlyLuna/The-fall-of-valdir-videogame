@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 
-export (int) var speed = 6000
+export (int) var speed = 6000 
 var screen_size
 var movement
 var points = 0
