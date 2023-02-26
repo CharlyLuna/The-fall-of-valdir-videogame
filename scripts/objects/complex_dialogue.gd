@@ -8,14 +8,10 @@ var dialogue = 0
 var is_active = false
 var initial_dialogue = true
 var finished = false
-signal finished_z1_dialogue()
-signal finished_z3_quest()
-signal delivered_quest()
 signal finished_dialogue()
-signal dialogue_final_quest()
-signal finished_game()
-signal final_quest_accepted()
 var character = Global.character
+# Call the desicion box
+signal show_desicion(message, options)
 
 func _ready():
 	$NinePatchRect.visible = false
@@ -52,28 +48,12 @@ func next_line():
 	#Only if we are in the initial dialogue we check if the lenght of it is higher than the current index
 	if initial_dialogue:
 		if(current_dialogue_index >= len(dialogues[0])):
-			var zone = get_tree().get_current_scene().name
-			var character = get_parent().name
+			#var zone = get_tree().get_current_scene().name
+			#var character = get_parent().name
 			$Timer.start()
 			$NinePatchRect.visible = false
 			activate_movement()
 			initial_dialogue = false
-			if zone == "Main":
-				Global.finished_poor_dialogue = true
-			if zone == "zone3" and Global.quest_completed == false and character == "knight_npc":
-				Global.quest_completed = true
-				emit_signal("finished_z3_quest")
-			if zone == "zone2" and Global.quest_completed == true and character == "merchant_npc":
-				emit_signal("delivered_quest")
-			if zone == "zone2" and character == "captain_npc":
-				Global.start_final_quest = true
-			if zone == "zone3" and character == "princess_npc" and !Global.final_quest_accepted:
-				Global.final_quest_accepted = true
-				emit_signal("final_quest_accepted")
-			if Global.final_quest_accepted and (character == "drunk_man_npc" || character == "barKeeper" || character == "poor_npc"):
-				emit_signal("dialogue_final_quest")
-			if zone == "zone3" and character == "princess_npc" and Global.final_quest_completed:
-				emit_signal("finished_game")
 			emit_signal("finished_dialogue")
 			return
 		
@@ -83,14 +63,22 @@ func next_line():
 		$NinePatchRect.visible = false
 		activate_movement()
 		return
-		
-	$NinePatchRect/name.text = dialogues[dialogue][current_dialogue_index]["name"]
-	$NinePatchRect/message.text = dialogues[dialogue][current_dialogue_index]["message"]
-	$NinePatchRect/message.percent_visible = 0
-	$NinePatchRect/Tween.interpolate_property(		$NinePatchRect/message, "percent_visible", 0, 1, 1,
-		Tween.TRANS_LINEAR, Tween.EASE_IN_OUT
-	)
-	$NinePatchRect/Tween.start()
+	
+	if dialogues[dialogue][current_dialogue_index]["name"] == "Option":
+		var message = dialogues[dialogue][current_dialogue_index]["message"]
+		var options = dialogues[dialogue][current_dialogue_index]["options"]
+		is_active = false
+		$NinePatchRect.visible = false
+		emit_signal("show_desicion", message, options)
+	else:
+		$NinePatchRect/name.text = dialogues[dialogue][current_dialogue_index]["name"]
+		$NinePatchRect/message.text = dialogues[dialogue][current_dialogue_index]["message"]
+		$NinePatchRect/message.percent_visible = 0
+		$NinePatchRect/Tween.interpolate_property(
+			$NinePatchRect/message, "percent_visible", 0, 1, 1,
+			Tween.TRANS_LINEAR, Tween.EASE_IN_OUT
+		)
+		$NinePatchRect/Tween.start()
 
 # Load file that contains the dialogues
 func load_dialogue():
@@ -119,3 +107,14 @@ func _on_Timer_timeout():
 
 func _on_Tween_tween_completed(object, key):
 	finished = true
+
+
+func _on_desicion_box_desicion_taken(next_dialogue):
+	current_dialogue_index = next_dialogue -1
+	print(dialogues[dialogue][current_dialogue_index])
+	next_line()
+	is_active = true
+	$NinePatchRect.visible = true
+
+func _on_event_trigger_bandit_girl_conversation():
+	play()

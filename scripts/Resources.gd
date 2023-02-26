@@ -15,3 +15,4 @@ var people_for_final_q= 0
 var first_talk_merchant = true 
 var first_talk_barkeeper = true
 var first_talk_drunk = true
+var controlling_special_charac = false

@@ -1,0 +1,104 @@
+[
+  [
+    {
+      "name": "Traveler",
+      "message": "Hey kid I need my money back... you shouldn't take other people's things "
+    },
+    {
+      "name": "Ragged child",
+      "message": "Yeah? well you know... I need it more than you"
+    },
+    {
+      "name": "Option",
+      "message": "What happened to this kid? He seems... broken, I must be careful with what I say next",
+      "options": [
+        {
+          "text": "Empathize",
+          "goes_to": 3
+        },
+        {
+          "text": "Get angry",
+          "goes_to": 12
+        }
+      ]
+    },
+    {
+      "name": "Traveler",
+      "message": "I understand, But-"
+    },
+    {
+      "name": "Ragged child",
+      "message": "You understand?? don't make me laugh, you don't know anything about me, about what've done"
+    },
+    {
+      "name": "Traveler",
+      "message": "You're right, I don't know you and yet I can see how broken you are"
+    },
+    {
+      "name": "Ragged child",
+      "message": "You... I... "
+    },
+    {
+      "name": "Traveler",
+      "message": "I can see you've been through a lot, I haven't seen a lot of this place but it doesn't look like a place for kids"
+    },
+    {
+      "name": "Ragged child",
+      "message": "Just go away..."
+    },
+    {
+      "name": "Traveler",
+      "message": "Maybe I can help you, if you explain me what happened to you"
+    },
+    {
+      "name": "Ragged child",
+      "message": "You can't, you are not like us, I can tell... you don't understand our situation, ¡¡nobody does!!"
+    },
+    {
+      "name": "Option",
+      "message": "This is going over my control... What should I do?",
+      "options": [
+        {
+          "text": "Stay calm",
+          "goes_to": 15
+        },
+        {
+          "text": "Yell",
+          "goes_to": 15
+        }
+      ]
+    },
+    {
+      "name": "Traveler",
+      "message": "You need it more? "
+    },
+    {
+      "name": "Ragged child",
+      "message": "You don't understand our situation, ¡¡nobody does!!"
+    },
+    {
+      "name": "Option",
+      "message": "This is going over my control... What should I do?",
+      "options": [
+        {
+          "text": "Stay calm",
+          "goes_to": 15
+        },
+        {
+          "text": "Yell",
+          "goes_to": 15
+        }
+      ]
+    },
+    {
+      "name": "Ragged child",
+      "message": "Final test message"
+    }
+  ],
+  [
+    {
+      "name": "Ragged child",
+      "message": "...."
+    }
+  ]
+]

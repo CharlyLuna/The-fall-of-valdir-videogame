@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://assets/tiles/environment/layers/sliced-tileset/ground.png" type="Texture" id=1]
 [ext_resource path="res://assets/tiles/environment/layers/sliced-tileset/window.png" type="Texture" id=2]
@@ -21,6 +21,12 @@
 [ext_resource path="res://scenes/characters/bandit_npc.tscn" type="PackedScene" id=19]
 [ext_resource path="res://scenes/characters/shady_guy_npc.tscn" type="PackedScene" id=20]
 [ext_resource path="res://scenes/characters/drunk_man_npc.tscn" type="PackedScene" id=21]
+[ext_resource path="res://scenes/characters/lowborn_child.tscn" type="PackedScene" id=22]
+[ext_resource path="res://scripts/objects/event_trigger2.gd" type="Script" id=23]
+[ext_resource path="res://scripts/objects/event_trigger.gd" type="Script" id=24]
+[ext_resource path="res://scenes/objects/dialogue.tscn" type="PackedScene" id=25]
+[ext_resource path="res://scripts/objects/complex_dialogue.gd" type="Script" id=26]
+[ext_resource path="res://scenes/objects/desicion_box.tscn" type="PackedScene" id=27]
 
 [sub_resource type="TileSet" id=20]
 0/name = "wall"
@@ -372,6 +378,9 @@ points = PoolVector2Array( 16, 32, 0, 32, 0, 16, 16, 16 )
 } ]
 1/z_index = 0
 
+[sub_resource type="RectangleShape2D" id=24]
+extents = Vector2( 13, 25 )
+
 [node name="secundaryZone" type="Node2D"]
 script = ExtResource( 18 )
 __meta__ = {
@@ -459,6 +468,41 @@ position = Vector2( 432, 544 )
 scale = Vector2( 1.2, 1.2 )
 script = null
 
+[node name="lowborn_child" parent="." instance=ExtResource( 22 )]
+position = Vector2( 1368, 544 )
+
+[node name="dialogue" parent="lowborn_child" instance=ExtResource( 25 )]
+script = ExtResource( 26 )
+dialogue_file = "res://dialogues/extra_secundary_mission/meeting.json"
+
+[node name="desicion_box" parent="lowborn_child" instance=ExtResource( 27 )]
+margin_left = -176.0
+margin_top = -184.0
+margin_right = -136.0
+margin_bottom = -144.0
+
+[node name="event_trigger" type="Area2D" parent="."]
+position = Vector2( 1320, 552 )
+script = ExtResource( 24 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="event_trigger"]
+position = Vector2( -3, -15 )
+shape = SubResource( 24 )
+
+[node name="event_trigger2" type="Area2D" parent="."]
+position = Vector2( 1168, 552 )
+script = ExtResource( 23 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="event_trigger2"]
+position = Vector2( -3, -15 )
+shape = SubResource( 24 )
+
 [node name="player" parent="." instance=ExtResource( 17 )]
-position = Vector2( 25, 547 )
+position = Vector2( 1256, 544 )
 scale = Vector2( 0.85, 0.85 )
+
+[connection signal="show_desicion" from="lowborn_child/dialogue" to="lowborn_child/desicion_box" method="_on_dialogue_show_desicion"]
+[connection signal="desicion_taken" from="lowborn_child/desicion_box" to="lowborn_child/dialogue" method="_on_desicion_box_desicion_taken"]
+[connection signal="bandit_girl_conversation" from="event_trigger" to="lowborn_child/dialogue" method="_on_event_trigger_bandit_girl_conversation"]
+[connection signal="body_entered" from="event_trigger" to="event_trigger" method="_on_event_trigger_body_entered"]
+[connection signal="body_entered" from="event_trigger2" to="event_trigger2" method="_on_event_trigger_body_entered"]
