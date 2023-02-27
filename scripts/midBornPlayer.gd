@@ -68,7 +68,7 @@ func _on_Main_finished_final_quest():
 	$final_quest_finished.start()
 	$thought_hint.play("This is enough people, I should go back with lady Liana")
 
-
+#Main quest
 func _on_quest_finished_timeout():
 	$thought_hint.hide()
 
@@ -76,7 +76,19 @@ func _on_quest_finished_timeout():
 func _on_quest_delivered_timeout():
 	$thought_hint.hide()
 
-
+#Final quest
 func _on_final_quest_finished_timeout():
 	print("hided")
 	$thought_hint.hide()
+
+# Side quest
+func _on_dialogue_finished_dialogue():
+	set_active(false)
+
+
+func _on_flexible_dialogues_finished_dialogue():
+	set_active(false)
+
+
+func _on_flexible_dialogues_kinght_finished_dialogue():
+	set_active(false)
