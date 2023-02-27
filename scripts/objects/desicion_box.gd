@@ -41,3 +41,9 @@ func _input(event):
 func _on_dialogue_show_desicion(message, options):
 	possible_options = options
 	play(message, options)
+
+
+func _on_flexible_dialogues_show_desicion(message, options):
+	possible_options = options
+	play(message, options)
+

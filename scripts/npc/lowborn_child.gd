@@ -1,14 +1,19 @@
 extends KinematicBody2D
 
 
-export (int) var speed = 6000 
+export (int) var speed = 6000
 var movement
 var collision
 var controlled_by_user = Global.controlling_special_charac
 var is_attacking = false
 var direction = 0
 var pos = 600
+var quest_finished = Global.side_quest_finished
 	
+func _ready():
+	if quest_finished:
+		queue_free()
+
 func start(pos):
 	position = pos
 	show()
@@ -19,6 +24,7 @@ func move(to_pos, dir):
 	pos = to_pos
 	
 func _physics_process(delta):
+	controlled_by_user = Global.controlling_special_charac
 	movement = Vector2()
 	if controlled_by_user:
 		if Input.is_action_pressed("ui_right"):
@@ -84,3 +90,7 @@ func _on_AnimatedSprite_animation_finished():
 	if is_attacking:
 		$AnimatedSprite.flip_h = !$AnimatedSprite.flip_h
 		is_attacking = false
+
+
+func _on_flexible_dialogues_kinght_finished_dialogue():
+	Global.controlling_special_charac = true

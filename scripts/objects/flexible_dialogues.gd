@@ -1,4 +1,4 @@
-extends CanvasLayer
+extends Control
 
 export(String, FILE, "*.json") var dialogue_file
 
@@ -120,3 +120,4 @@ func _on_desicion_box_desicion_taken(next_dialogue):
 
 func _on_event_trigger_bandit_girl_conversation():
 	play()
+	show()
