@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=43 format=2]
 
 [ext_resource path="res://assets/tiles/environment/layers/sliced-tileset/ground.png" type="Texture" id=1]
 [ext_resource path="res://assets/tiles/environment/layers/sliced-tileset/window.png" type="Texture" id=2]
@@ -25,9 +25,13 @@
 [ext_resource path="res://scripts/objects/event_trigger2.gd" type="Script" id=23]
 [ext_resource path="res://scripts/objects/event_trigger.gd" type="Script" id=24]
 [ext_resource path="res://scripts/objects/knight_dialogue_side_quest.gd" type="Script" id=25]
+[ext_resource path="res://scenes/objects/Attack_instruction.tscn" type="PackedScene" id=26]
 [ext_resource path="res://scenes/objects/desicion_box.tscn" type="PackedScene" id=27]
 [ext_resource path="res://scenes/characters/killable_knight.tscn" type="PackedScene" id=28]
 [ext_resource path="res://scenes/objects/flexible_dialogues.tscn" type="PackedScene" id=29]
+[ext_resource path="res://scripts/objects/Attack_instruction.gd" type="Script" id=30]
+[ext_resource path="res://scenes/objects/key_e.tscn" type="PackedScene" id=31]
+[ext_resource path="res://scripts/objects/go_between_levels.gd" type="Script" id=32]
 
 [sub_resource type="TileSet" id=20]
 0/name = "wall"
@@ -382,6 +386,15 @@ points = PoolVector2Array( 16, 32, 0, 32, 0, 16, 16, 16 )
 [sub_resource type="RectangleShape2D" id=24]
 extents = Vector2( 13, 25 )
 
+[sub_resource type="RectangleShape2D" id=25]
+extents = Vector2( 18, 32 )
+
+[sub_resource type="RectangleShape2D" id=26]
+extents = Vector2( 18, 32 )
+
+[sub_resource type="RectangleShape2D" id=27]
+extents = Vector2( 14, 26 )
+
 [node name="secundaryZone" type="Node2D"]
 script = ExtResource( 18 )
 __meta__ = {
@@ -482,13 +495,16 @@ margin_right = -130.667
 margin_bottom = -161.333
 
 [node name="flexible_dialogues" parent="lowborn_child" instance=ExtResource( 29 )]
-visible = false
 margin_left = -234.667
 margin_top = -137.333
 margin_right = -194.667
 margin_bottom = -97.3333
 rect_scale = Vector2( 1.01704, 1.06223 )
-dialogue_file = "res://dialogues/extra_secundary_mission/meeting.json"
+dialogue_file = "res://dialogues/extra_secondary_mission/meeting.json"
+
+[node name="event_finished_timer" type="Timer" parent="lowborn_child"]
+wait_time = 1.5
+one_shot = true
 
 [node name="event_trigger" type="Area2D" parent="."]
 position = Vector2( 1320, 552 )
@@ -509,30 +525,78 @@ position = Vector2( 13, -15 )
 shape = SubResource( 24 )
 
 [node name="player" parent="." instance=ExtResource( 17 )]
-position = Vector2( 1240, 544 )
+position = Vector2( 1260, 545 )
 scale = Vector2( 0.85, 0.85 )
 
 [node name="killable_knight" parent="." instance=ExtResource( 28 )]
 position = Vector2( 944, 544 )
 scale = Vector2( 1.2, 1.2 )
 
+[node name="death_timer" type="Timer" parent="killable_knight"]
+wait_time = 2.0
+one_shot = true
+
 [node name="flexible_dialogues_kinght" parent="." instance=ExtResource( 29 )]
-margin_left = 1176.0
-margin_top = 440.0
-margin_right = 1216.0
-margin_bottom = 480.0
+visible = false
+margin_left = 1168.0
+margin_top = 448.0
+margin_right = 1208.0
+margin_bottom = 488.0
 rect_scale = Vector2( 0.860181, 0.815004 )
 script = ExtResource( 25 )
-dialogue_file = "res://dialogues/extra_secundary_mission/knight_talk.json"
+dialogue_file = "res://dialogues/extra_secondary_mission/knight_talk.json"
 
+[node name="Attack_instruction" parent="." instance=ExtResource( 26 )]
+margin_left = 957.0
+margin_top = 311.0
+margin_right = 1485.0
+margin_bottom = 367.0
+rect_scale = Vector2( 1.1691, 1.21194 )
+script = ExtResource( 30 )
+
+[node name="barrier" type="StaticBody2D" parent="."]
+position = Vector2( -18, 560 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="barrier"]
+position = Vector2( 0, -22 )
+shape = SubResource( 25 )
+
+[node name="barrier2" type="StaticBody2D" parent="."]
+position = Vector2( 2104, 552 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="barrier2"]
+position = Vector2( -8, -22 )
+shape = SubResource( 26 )
+
+[node name="Main" type="Area2D" parent="."]
+position = Vector2( 200, 536 )
+script = ExtResource( 32 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Main"]
+position = Vector2( -185, 0 )
+shape = SubResource( 27 )
+
+[node name="key_e" parent="Main" instance=ExtResource( 31 )]
+position = Vector2( -184, -36 )
+scale = Vector2( 1.1, 1.2 )
+
+[node name="MainPos" type="Position2D" parent="."]
+position = Vector2( 16, 549 )
+
+[connection signal="attack" from="lowborn_child" to="killable_knight" method="_on_lowborn_child_attack"]
+[connection signal="attack" from="lowborn_child" to="Attack_instruction" method="_on_lowborn_child_attack"]
 [connection signal="desicion_taken" from="lowborn_child/desicion_box" to="lowborn_child/flexible_dialogues" method="_on_desicion_box_desicion_taken"]
 [connection signal="finished_dialogue" from="lowborn_child/flexible_dialogues" to="player" method="_on_flexible_dialogues_finished_dialogue"]
 [connection signal="finished_dialogue" from="lowborn_child/flexible_dialogues" to="killable_knight" method="_on_flexible_dialogues_finished_dialogue"]
 [connection signal="show_desicion" from="lowborn_child/flexible_dialogues" to="lowborn_child/desicion_box" method="_on_flexible_dialogues_show_desicion"]
+[connection signal="timeout" from="lowborn_child/event_finished_timer" to="lowborn_child/flexible_dialogues" method="_on_event_finished_timer_timeout"]
 [connection signal="bandit_girl_conversation" from="event_trigger" to="lowborn_child/flexible_dialogues" method="_on_event_trigger_bandit_girl_conversation"]
 [connection signal="body_entered" from="event_trigger" to="event_trigger" method="_on_event_trigger_body_entered"]
-[connection signal="body_entered" from="event_trigger2" to="event_trigger2" method="_on_event_trigger_body_entered"]
 [connection signal="body_entered" from="event_trigger2" to="event_trigger2" method="_on_event_trigger2_body_entered"]
 [connection signal="guard_entered" from="event_trigger2" to="flexible_dialogues_kinght" method="_on_event_trigger2_guard_entered"]
+[connection signal="timeout" from="killable_knight/death_timer" to="lowborn_child/flexible_dialogues" method="_on_death_timer_timeout"]
 [connection signal="finished_dialogue" from="flexible_dialogues_kinght" to="lowborn_child" method="_on_flexible_dialogues_kinght_finished_dialogue"]
 [connection signal="finished_dialogue" from="flexible_dialogues_kinght" to="player" method="_on_flexible_dialogues_kinght_finished_dialogue"]
+[connection signal="finished_dialogue" from="flexible_dialogues_kinght" to="Attack_instruction" method="_on_flexible_dialogues_kinght_finished_dialogue"]
+[connection signal="body_entered" from="Main" to="Main" method="_on_Main_body_entered"]
+[connection signal="body_exited" from="Main" to="Main" method="_on_Main_body_exited"]

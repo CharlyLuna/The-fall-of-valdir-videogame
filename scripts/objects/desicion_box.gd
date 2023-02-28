@@ -21,12 +21,14 @@ func play(message, options):
 func _input(event):
 	if is_visible:
 		if Input.is_action_just_pressed("choose_opt_1"):
+			Global.npc_trust += 1
 			var next_line = possible_options[0].goes_to
 			emit_signal("desicion_taken", next_line)
 			hide()
 			emit_signal("disappear")
 			is_visible = false
 		if Input.is_action_just_pressed("choose_opt_2"):
+			Global.npc_trust -= 1
 			var next_line = possible_options[1].goes_to
 			emit_signal("desicion_taken", next_line)
 			hide()

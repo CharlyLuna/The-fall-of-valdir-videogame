@@ -8,6 +8,8 @@ var points = 0
 var collision
 # check wich character are you playing
 var character = Global.character
+# side quest variables
+var times_talked_to_main_npc = 0
 	
 func start(pos):
 	position = pos
@@ -47,6 +49,7 @@ func _physics_process(delta):
 				
 
 func set_active(active):
+	print("movement of player:", active)
 	set_physics_process(active)
 	set_process(active)
 	set_process_input(active)
@@ -78,7 +81,6 @@ func _on_quest_delivered_timeout():
 
 #Final quest
 func _on_final_quest_finished_timeout():
-	print("hided")
 	$thought_hint.hide()
 
 # Side quest
@@ -87,7 +89,9 @@ func _on_dialogue_finished_dialogue():
 
 
 func _on_flexible_dialogues_finished_dialogue():
-	set_active(false)
+	times_talked_to_main_npc += 1
+	if times_talked_to_main_npc < 2:
+		set_active(false)
 
 
 func _on_flexible_dialogues_kinght_finished_dialogue():

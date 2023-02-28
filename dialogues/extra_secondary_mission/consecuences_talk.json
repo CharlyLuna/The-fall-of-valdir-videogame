@@ -56,11 +56,11 @@
       "options": [
         {
           "text": "Hug her",
-          "goes_to": 15
+          "goes_to": 14
         },
         {
           "text": "Support her",
-          "goes_to": 15
+          "goes_to": 14
         }
       ]
     },
@@ -78,11 +78,11 @@
       "options": [
         {
           "text": "Support her",
-          "goes_to": 15
+          "goes_to": 14
         },
         {
           "text": "Say nothing",
-          "goes_to": 15
+          "goes_to": 14
         }
       ]
     },

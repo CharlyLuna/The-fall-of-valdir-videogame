@@ -9,6 +9,7 @@ var is_attacking = false
 var direction = 0
 var pos = 600
 var quest_finished = Global.side_quest_finished
+signal attack()
 	
 func _ready():
 	if quest_finished:
@@ -27,16 +28,15 @@ func _physics_process(delta):
 	controlled_by_user = Global.controlling_special_charac
 	movement = Vector2()
 	if controlled_by_user:
-		if Input.is_action_pressed("ui_right"):
-			movement.x += 1
-		if Input.is_action_pressed("ui_left"):
-			movement.x -= 1
+		#if Input.is_action_pressed("ui_right"):
+		#	movement.x += 1
+		#if Input.is_action_pressed("ui_left"):
+		#	movement.x -= 1
 		if Input.is_action_pressed("attack"):
 			if !is_attacking && $AnimatedSprite.animation != "walking":
 				$AnimatedSprite.animation = "attack"
 				$AnimatedSprite.flip_h = !$AnimatedSprite.flip_h
 				is_attacking = true
-				print(movement.x)
 		if movement.length() > 0:
 			movement = movement.normalized() * speed
 			$AnimatedSprite.play()
@@ -44,7 +44,7 @@ func _physics_process(delta):
 			if !is_attacking:
 				$AnimatedSprite.animation = "idle"
 				# Set direction according to the last one
-				print($AnimatedSprite.flip_h)
+
 				$AnimatedSprite.flip_h = $AnimatedSprite.flip_h
 		if movement.x != 0:
 			##Movemente animation
@@ -88,6 +88,8 @@ func set_animation(animation):
 
 func _on_AnimatedSprite_animation_finished():
 	if is_attacking:
+		emit_signal("attack")
+		Global.controlling_special_charac = false
 		$AnimatedSprite.flip_h = !$AnimatedSprite.flip_h
 		is_attacking = false
 

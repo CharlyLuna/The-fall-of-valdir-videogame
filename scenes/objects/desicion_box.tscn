@@ -35,19 +35,19 @@ text = "Enunciado de ejemplo"
 [node name="opcion2" type="RichTextLabel" parent="."]
 margin_left = 136.0
 margin_top = 104.0
-margin_right = 200.0
+margin_right = 208.0
 margin_bottom = 120.0
 custom_fonts/normal_font = SubResource( 2 )
 text = "Aceptar"
 
 [node name="opcion1" type="RichTextLabel" parent="."]
-margin_left = 32.0
+margin_left = 16.0
 margin_top = 104.0
-margin_right = 96.0
+margin_right = 104.0
 margin_bottom = 120.0
 custom_fonts/normal_font = SubResource( 3 )
 text = "Rechazar"
 
 [node name="key_e" parent="." instance=ExtResource( 3 )]
 visible = true
-position = Vector2( 16, 112 )
+position = Vector2( 45, 93 )

@@ -7,13 +7,15 @@ var collision
 var entered
 var walking_limit = 0
 #Variable to see if the trigger action has already happened
-var hitted = false
+var death = false
 #Check if the mission involving the npc hasn't finished
 var quest_finished = Global.side_quest_finished
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	hide()
+	#Only leave the hide and queue_free() method
+	#hide()
+	move(1170)
 	if quest_finished:
 		queue_free()
 	
@@ -30,7 +32,6 @@ func _physics_process(delta):
 		if position.x > walking_limit:
 			direction = 0
 			$AnimatedSprite.animation = "idle"
-			emit_signal("talking")
 			
 		movement.x += direction
 			
@@ -51,5 +52,12 @@ func _on_dialogue_finished_dialogue():
 
 
 func _on_flexible_dialogues_finished_dialogue():
-	show()
-	move(1170)
+	if !death:
+		show()
+		move(1170)
+
+
+func _on_lowborn_child_attack():
+	death = true
+	$AnimatedSprite.animation = "death"
+	$death_timer.start()

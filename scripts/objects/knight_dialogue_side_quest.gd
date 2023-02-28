@@ -117,18 +117,6 @@ func _on_desicion_box_desicion_taken(next_dialogue):
 	is_active = true
 	$NinePatchRect.visible = true
 
-func _on_event_trigger_bandit_girl_conversation():
-	play()
-	show()
-
-
-func _on_death_timer_timeout():
-	dialogue_file = "res://dialogues/extra_secondary_mission/consecuences_talk.json"
-	play()
-	show()
-
-
-func _on_event_finished_timer_timeout():
-	dialogue_file = "res://dialogues/extra_secondary_mission/consecuences_talk.json"
+func _on_event_trigger2_guard_entered():
 	play()
 	show()

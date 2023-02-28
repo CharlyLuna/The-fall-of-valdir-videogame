@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=41 format=2]
 
 [ext_resource path="res://scenes/characters/midBornPlayer.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/tiles/environment/props/houses.png" type="Texture" id=2]
@@ -29,6 +29,7 @@
 [ext_resource path="res://scenes/objects/thought_hint.tscn" type="PackedScene" id=27]
 [ext_resource path="res://scenes/characters/drunk_man_npc.tscn" type="PackedScene" id=28]
 [ext_resource path="res://scenes/characters/gypsy_npc.tscn" type="PackedScene" id=29]
+[ext_resource path="res://scripts/objects/go_between_levels.gd" type="Script" id=30]
 
 [sub_resource type="TileSet" id=17]
 0/name = "wall"
@@ -389,6 +390,9 @@ extents = Vector2( 18, 32 )
 [sub_resource type="RectangleShape2D" id=22]
 extents = Vector2( 16, 28 )
 
+[sub_resource type="RectangleShape2D" id=23]
+extents = Vector2( 47, 26 )
+
 [node name="Main" type="Node2D"]
 position = Vector2( 48, 296 )
 script = ExtResource( 9 )
@@ -584,6 +588,21 @@ position = Vector2( 706, 252 )
 scale = Vector2( 1.2, 1.2 )
 script = null
 
+[node name="secundaryZone" type="Area2D" parent="."]
+position = Vector2( 1331, 233 )
+script = ExtResource( 30 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="secundaryZone"]
+position = Vector2( -182, 7 )
+shape = SubResource( 23 )
+
+[node name="key_e" parent="secundaryZone" instance=ExtResource( 22 )]
+position = Vector2( -184, -36 )
+scale = Vector2( 1.1, 1.2 )
+
+[node name="secundaryZonePos" type="Position2D" parent="."]
+position = Vector2( 1152, 251 )
+
 [connection signal="finished_final_quest" from="." to="player" method="_on_Main_finished_final_quest"]
 [connection signal="tree_entered" from="." to="zone2" method="_on_Main_tree_entered"]
 [connection signal="body_entered" from="poor_npc2" to="poor_npc2" method="_on_poor_npc2_body_entered"]
@@ -594,3 +613,5 @@ script = null
 [connection signal="body_exited" from="zone2" to="." method="_on_door_area_body_exited"]
 [connection signal="body_exited" from="zone2" to="zone2" method="_on_door_area_body_exited"]
 [connection signal="timeout" from="player/final_quest_finished" to="player" method="_on_final_quest_finished_timeout"]
+[connection signal="body_entered" from="secundaryZone" to="secundaryZone" method="_on_Main_body_entered"]
+[connection signal="body_exited" from="secundaryZone" to="secundaryZone" method="_on_Main_body_exited"]
