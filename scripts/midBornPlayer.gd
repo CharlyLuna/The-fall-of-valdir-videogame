@@ -10,6 +10,8 @@ var collision
 var character = Global.character
 # side quest variables
 var times_talked_to_main_npc = 0
+signal last_talk()
+signal finished_side_quest()
 	
 func start(pos):
 	position = pos
@@ -90,9 +92,17 @@ func _on_dialogue_finished_dialogue():
 
 func _on_flexible_dialogues_finished_dialogue():
 	times_talked_to_main_npc += 1
-	if times_talked_to_main_npc < 2:
+	if times_talked_to_main_npc < 3:
 		set_active(false)
+	if times_talked_to_main_npc == 2:
+		emit_signal("last_talk")
+	if times_talked_to_main_npc == 3:
+		emit_signal("finished_side_quest")
 
 
 func _on_flexible_dialogues_kinght_finished_dialogue():
+	set_active(false)
+
+
+func _on_flexible_dialogues_side_miss_finished_dialogue():
 	set_active(false)

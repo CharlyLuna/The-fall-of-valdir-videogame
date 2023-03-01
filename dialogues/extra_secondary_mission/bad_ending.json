@@ -1,0 +1,46 @@
+[
+  [
+    {
+      "name": "Ragged child",
+      "message": "I... I should go now"
+    },
+    {
+      "name": "Traveler",
+      "message": "Where would you go?"
+    },
+    {
+      "name": "Ragged child",
+      "message": "To where no one can hurt me"
+    },
+    {
+      "name": "Traveler",
+      "message": "How broken is this city...?"
+    },
+    {
+      "name": "Ragged child",
+      "message": "You've seen nothing yet"
+    },
+    {
+      "name": "Ragged child",
+      "message": "There are worst things in this city... the more money they have the less human they are"
+    },
+    {
+      "name": "Ragged child",
+      "message": "Hope you don't end up being one of their puppets, but I really think you are a lost cause"
+    },
+    {
+      "name": "Traveler",
+      "message": "..."
+    },
+    {
+      "name": "Ragged child",
+      "message": "It doesn't matter, nothing matters now, farewell stranger"
+    }
+  ],
+  [
+    {
+      "name": "ERROR",
+      "message": "If you're seeing this message something bad happened"
+    }
+  ]
+]

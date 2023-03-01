@@ -124,11 +124,29 @@ func _on_event_trigger_bandit_girl_conversation():
 
 func _on_death_timer_timeout():
 	dialogue_file = "res://dialogues/extra_secondary_mission/consecuences_talk.json"
+	#Reset values before playing dialogues
+	current_dialogue_index = 0
+	dialogue = 0
+	initial_dialogue = true
 	play()
 	show()
 
 
 func _on_event_finished_timer_timeout():
-	dialogue_file = "res://dialogues/extra_secondary_mission/consecuences_talk.json"
+	var how_much_trust = Global.npc_trust
+	print(how_much_trust)
+	if how_much_trust >= 1:
+		dialogue_file = "res://dialogues/extra_secondary_mission/good_ending.json"
+	else:
+		print("bad ending")
+		dialogue_file = "res://dialogues/extra_secondary_mission/bad_ending.json"
+	#Reset values before playing dialogues
+	current_dialogue_index = 0
+	dialogue = 0
+	initial_dialogue = true
 	play()
 	show()
+
+
+func _on_sec_mission_init_started_side_mission():
+	play()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=2]
+[gd_scene load_steps=50 format=2]
 
 [ext_resource path="res://scenes/characters/midBornPlayer.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/tiles/environment/props/houses.png" type="Texture" id=2]
@@ -30,6 +30,14 @@
 [ext_resource path="res://scenes/characters/drunk_man_npc.tscn" type="PackedScene" id=28]
 [ext_resource path="res://scenes/characters/gypsy_npc.tscn" type="PackedScene" id=29]
 [ext_resource path="res://scripts/objects/go_between_levels.gd" type="Script" id=30]
+[ext_resource path="res://scenes/characters/lowborn_child.tscn" type="PackedScene" id=31]
+[ext_resource path="res://scripts/objects/sec_mission_init.gd" type="Script" id=32]
+[ext_resource path="res://scenes/objects/flexible_dialogues.tscn" type="PackedScene" id=33]
+[ext_resource path="res://scripts/objects/event_trigger3.gd" type="Script" id=34]
+[ext_resource path="res://scenes/objects/Attack_instruction.tscn" type="PackedScene" id=35]
+[ext_resource path="res://scripts/objects/instructions.gd" type="Script" id=36]
+[ext_resource path="res://scenes/objects/mini_hint.tscn" type="PackedScene" id=37]
+[ext_resource path="res://scripts/objects/mini_hint.gd" type="Script" id=38]
 
 [sub_resource type="TileSet" id=17]
 0/name = "wall"
@@ -393,6 +401,9 @@ extents = Vector2( 16, 28 )
 [sub_resource type="RectangleShape2D" id=23]
 extents = Vector2( 47, 26 )
 
+[sub_resource type="RectangleShape2D" id=24]
+extents = Vector2( 10, 25 )
+
 [node name="Main" type="Node2D"]
 position = Vector2( 48, 296 )
 script = ExtResource( 9 )
@@ -405,7 +416,7 @@ __meta__ = {
 tile_set = SubResource( 17 )
 cell_size = Vector2( 16, 16 )
 format = 1
-tile_data = PoolIntArray( -393105, 10, 0, -393103, 0, 0, -393102, 0, 0, -393101, 0, 0, -393100, 0, 0, -393099, 0, 0, -393098, 0, 0, -393097, 0, 0, -393096, 0, 0, -393095, 0, 0, -393094, 0, 0, -393093, 0, 0, -393092, 0, 0, -393091, 8, 0, -327567, 0, 0, -327566, 0, 0, -327565, 0, 0, -327564, 0, 0, -327563, 0, 0, -327562, 0, 0, -327561, 0, 0, -327560, 0, 0, -327559, 0, 0, -327558, 0, 0, -327557, 0, 0, -327556, 0, 0, -262033, 10, 0, -262031, 0, 0, -262030, 0, 0, -262029, 0, 0, -262028, 0, 0, -262027, 0, 0, -262026, 1, 0, -262025, 1, 0, -262024, 0, 0, -262023, 1, 0, -262022, 1, 0, -262021, 0, 0, -262020, 0, 0, -262019, 8, 0, -196495, 0, 0, -196494, 1, 0, -196493, 0, 0, -196492, 0, 0, -196491, 1, 0, -196490, 0, 0, -196489, 1, 0, -196488, 0, 0, -196487, 0, 0, -196486, 0, 0, -196485, 1, 0, -196484, 0, 0, -130961, 10, 0, -130959, 0, 0, -130958, 0, 0, -130957, 1, 0, -130956, 0, 0, -130955, 1, 0, -130954, 0, 0, -130953, 0, 0, -130952, 0, 0, -130951, 0, 0, -130950, 0, 0, -130949, 1, 0, -130948, 0, 0, -130947, 8, 0, -65425, 10, 0, -65423, 0, 0, -65422, 1, 0, -65421, 0, 0, -65420, 0, 0, -65419, 0, 0, -65418, 0, 0, -65417, 0, 0, -65416, 0, 0, -65415, 0, 0, -65414, 0, 0, -65413, 1, 0, -65412, 1, 0, 111, 10, 0, 113, 0, 0, 114, 0, 0, 115, 0, 0, 116, 0, 0, 117, 1, 0, 118, 0, 0, 119, 1, 0, 120, 0, 0, 121, 1, 0, 122, 0, 0, 123, 0, 0, 124, 1, 0, 125, 8, 0, 65647, 10, 0, 65649, 0, 0, 65650, 0, 0, 65651, 0, 0, 65652, 1, 0, 65653, 0, 0, 65654, 0, 0, 65655, 1, 0, 65656, 1, 0, 65657, 0, 0, 65658, 0, 0, 65659, 0, 0, 65660, 0, 0, 131183, 10, 0, 131185, 0, 0, 131186, 1, 0, 131187, 0, 0, 131188, 0, 0, 131189, 5, 0, 131192, 1, 0, 131193, 0, 0, 131194, 0, 0, 131195, 0, 0, 131196, 0, 0, 131197, 8, 0, 196719, 10, 0, 196721, 0, 0, 196722, 1, 0, 196723, 1, 0, 196724, 8, 0, 196725, 9, 0, 196726, 9, 0, 196727, 10, 0, 196729, 1, 0, 196730, 0, 0, 196731, 0, 0, 196732, 0, 0, 196733, 8, 0, 262255, 10, 0, 262257, 0, 0, 262258, 0, 0, 262259, 0, 0, 262265, 1, 0, 262266, 0, 0, 262267, 0, 0, 262268, 0, 0, 327791, 10, 0, 327793, 0, 0, 327794, 0, 0, 327795, 1, 0, 327796, 8, 0, 327797, 9, 0, 327798, 9, 0, 327799, 10, 0, 327801, 0, 0, 327802, 0, 0, 327803, 0, 0, 327804, 0, 0, 327805, 8, 0, 393327, 10, 0, 393329, 0, 0, 393330, 0, 0, 393331, 1, 0, 393334, 9, 0, 393337, 1, 0, 393338, 0, 0, 393339, 0, 0, 393340, 0, 0, 458863, 10, 0, 458865, 0, 0, 458866, 0, 0, 458867, 0, 0, 458868, 0, 0, 458869, 1, 0, 458871, 1, 0, 458872, 1, 0, 458873, 0, 0, 458874, 0, 0, 458875, 0, 0, 458876, 0, 0, 458877, 8, 0, 524401, 0, 0, 524402, 1, 0, 524403, 0, 0, 524404, 0, 0, 524405, 0, 0, 524406, 1, 0, 524407, 0, 0, 524408, 0, 0, 524409, 0, 0, 524410, 0, 0, 524411, 0, 0, 524412, 0, 0, 589935, 10, 0, 589937, 0, 0, 589938, 0, 0, 589939, 0, 0, 589940, 0, 0, 589941, 0, 0, 589942, 0, 0, 589943, 1, 0, 589944, 0, 0, 589945, 0, 0, 589946, 0, 0, 589947, 0, 0, 589948, 0, 0, 589949, 8, 0, 655473, 0, 0, 655474, 1, 0, 655475, 1, 0, 655476, 0, 0, 655477, 0, 0, 655478, 0, 0, 655479, 0, 0, 655480, 0, 0, 655481, 0, 0, 655482, 0, 0, 655483, 0, 0, 655484, 0, 0, 721007, 10, 0, 721009, 0, 0, 721010, 1, 0, 721011, 0, 0, 721012, 0, 0, 721013, 1, 0, 721014, 0, 0, 721015, 0, 0, 721016, 0, 0, 721017, 1, 0, 721018, 1, 0, 721019, 0, 0, 721020, 0, 0, 721021, 8, 0, 786545, 0, 0, 786546, 1, 0, 786547, 0, 0, 786548, 0, 0, 786549, 0, 0, 786550, 0, 0, 786551, 0, 0, 786552, 0, 0, 786553, 0, 0, 786554, 1, 0, 786555, 0, 0, 786556, 0, 0, 852079, 10, 0, 852081, 0, 0, 852082, 0, 0, 852083, 0, 0, 852084, 7, 0, 852086, 0, 0, 852087, 0, 0, 852088, 0, 0, 852089, 0, 0, 852090, 0, 0, 852091, 0, 0, 852092, 0, 0, 852093, 8, 0, 917617, 0, 0, 917618, 0, 0, 917619, 0, 0, 917622, 0, 0, 917623, 0, 0, 917624, 0, 0, 917625, 0, 0, 917626, 0, 0, 917627, 0, 0, 917628, 0, 0, 983151, 3, 0, 983154, 6, 0, 983158, 5, 0, 983161, 6, 0, 983163, 6, 0, 983165, 4, 0 )
+tile_data = PoolIntArray( -393105, 10, 0, -393103, 0, 0, -393102, 0, 0, -393101, 0, 0, -393100, 0, 0, -393099, 0, 0, -393098, 0, 0, -393097, 0, 0, -393096, 0, 0, -393095, 0, 0, -393094, 0, 0, -393093, 0, 0, -393092, 0, 0, -393091, 8, 0, -327567, 0, 0, -327566, 0, 0, -327565, 0, 0, -327564, 0, 0, -327563, 0, 0, -327562, 0, 0, -327561, 0, 0, -327560, 0, 0, -327559, 0, 0, -327558, 0, 0, -327557, 0, 0, -327556, 0, 0, -262033, 10, 0, -262031, 0, 0, -262030, 0, 0, -262029, 0, 0, -262028, 0, 0, -262027, 0, 0, -262026, 1, 0, -262025, 1, 0, -262024, 0, 0, -262023, 1, 0, -262022, 1, 0, -262021, 0, 0, -262020, 0, 0, -262019, 8, 0, -196495, 0, 0, -196494, 1, 0, -196493, 0, 0, -196492, 0, 0, -196491, 1, 0, -196490, 0, 0, -196489, 1, 0, -196488, 0, 0, -196487, 0, 0, -196486, 0, 0, -196485, 1, 0, -196484, 0, 0, -130961, 10, 0, -130959, 0, 0, -130958, 0, 0, -130957, 1, 0, -130956, 0, 0, -130955, 1, 0, -130954, 0, 0, -130953, 0, 0, -130952, 0, 0, -130951, 0, 0, -130950, 0, 0, -130949, 1, 0, -130948, 0, 0, -130947, 8, 0, -65425, 10, 0, -65423, 0, 0, -65422, 1, 0, -65421, 0, 0, -65420, 0, 0, -65419, 0, 0, -65418, 0, 0, -65417, 0, 0, -65416, 0, 0, -65415, 0, 0, -65414, 0, 0, -65413, 1, 0, -65412, 1, 0, 111, 10, 0, 113, 0, 0, 114, 0, 0, 115, 0, 0, 116, 0, 0, 117, 1, 0, 118, 0, 0, 119, 1, 0, 120, 0, 0, 121, 1, 0, 122, 0, 0, 123, 0, 0, 124, 1, 0, 125, 8, 0, 65647, 10, 0, 65649, 0, 0, 65650, 0, 0, 65651, 0, 0, 65652, 1, 0, 65653, 0, 0, 65654, 0, 0, 65655, 1, 0, 65656, 1, 0, 65657, 0, 0, 65658, 0, 0, 65659, 0, 0, 65660, 0, 0, 131183, 10, 0, 131185, 0, 0, 131186, 1, 0, 131187, 0, 0, 131188, 0, 0, 131189, 5, 0, 131192, 1, 0, 131193, 0, 0, 131194, 0, 0, 131195, 0, 0, 131196, 0, 0, 131197, 8, 0, 196719, 10, 0, 196721, 0, 0, 196722, 1, 0, 196723, 1, 0, 196724, 8, 0, 196725, 9, 0, 196726, 9, 0, 196727, 10, 0, 196729, 1, 0, 196730, 0, 0, 196731, 0, 0, 196732, 0, 0, 196733, 8, 0, 262255, 10, 0, 262257, 0, 0, 262258, 0, 0, 262259, 0, 0, 262265, 1, 0, 262266, 0, 0, 262267, 0, 0, 262268, 0, 0, 327791, 10, 0, 327793, 0, 0, 327794, 0, 0, 327795, 1, 0, 327796, 8, 0, 327797, 9, 0, 327798, 9, 0, 327799, 10, 0, 327801, 0, 0, 327802, 0, 0, 327803, 0, 0, 327804, 0, 0, 327805, 8, 0, 393327, 10, 0, 393329, 0, 0, 393330, 0, 0, 393331, 1, 0, 393334, 9, 0, 393337, 1, 0, 393338, 0, 0, 393339, 0, 0, 393340, 0, 0, 458863, 10, 0, 458865, 0, 0, 458866, 0, 0, 458867, 0, 0, 458868, 0, 0, 458869, 1, 0, 458870, 0, 0, 458871, 1, 0, 458872, 1, 0, 458873, 0, 0, 458874, 0, 0, 458875, 0, 0, 458876, 0, 0, 458877, 8, 0, 524401, 0, 0, 524402, 1, 0, 524403, 0, 0, 524404, 0, 0, 524405, 0, 0, 524406, 1, 0, 524407, 0, 0, 524408, 0, 0, 524409, 0, 0, 524410, 0, 0, 524411, 0, 0, 524412, 0, 0, 589935, 10, 0, 589937, 0, 0, 589938, 0, 0, 589939, 0, 0, 589940, 0, 0, 589941, 0, 0, 589942, 0, 0, 589943, 1, 0, 589944, 0, 0, 589945, 0, 0, 589946, 0, 0, 589947, 0, 0, 589948, 0, 0, 589949, 8, 0, 655473, 0, 0, 655474, 1, 0, 655475, 1, 0, 655476, 0, 0, 655477, 0, 0, 655478, 0, 0, 655479, 0, 0, 655480, 0, 0, 655481, 0, 0, 655482, 0, 0, 655483, 0, 0, 655484, 0, 0, 721007, 10, 0, 721009, 0, 0, 721010, 1, 0, 721011, 0, 0, 721012, 0, 0, 721013, 1, 0, 721014, 0, 0, 721015, 0, 0, 721016, 0, 0, 721017, 1, 0, 721018, 1, 0, 721019, 0, 0, 721020, 0, 0, 721021, 8, 0, 786545, 0, 0, 786546, 1, 0, 786547, 0, 0, 786548, 0, 0, 786549, 0, 0, 786550, 0, 0, 786551, 0, 0, 786552, 0, 0, 786553, 0, 0, 786554, 1, 0, 786555, 0, 0, 786556, 0, 0, 852079, 10, 0, 852081, 0, 0, 852082, 0, 0, 852083, 0, 0, 852084, 7, 0, 852086, 0, 0, 852087, 0, 0, 852088, 0, 0, 852089, 0, 0, 852090, 0, 0, 852091, 0, 0, 852092, 0, 0, 852093, 8, 0, 917617, 0, 0, 917618, 0, 0, 917619, 0, 0, 917622, 0, 0, 917623, 0, 0, 917624, 0, 0, 917625, 0, 0, 917626, 0, 0, 917627, 0, 0, 917628, 0, 0, 983151, 3, 0, 983154, 6, 0, 983158, 5, 0, 983161, 6, 0, 983163, 6, 0, 983165, 4, 0 )
 
 [node name="back_props" type="TileMap" parent="."]
 tile_set = SubResource( 16 )
@@ -547,8 +558,7 @@ scale = Vector2( 1.2, 1.2 )
 
 [node name="sec_mission_init" type="Area2D" parent="."]
 position = Vector2( 751, 243 )
-collision_layer = 2
-collision_mask = 3
+script = ExtResource( 32 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sec_mission_init"]
 shape = SubResource( 22 )
@@ -557,21 +567,40 @@ shape = SubResource( 22 )
 position = Vector2( 741, 251 )
 scale = Vector2( 1.2, 1.2 )
 
+[node name="drunk_man6_npc" parent="." instance=ExtResource( 28 )]
+position = Vector2( 706, 252 )
+scale = Vector2( 1.2, 1.2 )
+script = null
+
 [node name="player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 118, 252 )
+position = Vector2( 78, 252 )
 scale = Vector2( 0.85, 0.85 )
 collision_mask = 3
-__meta__ = {
-"_edit_horizontal_guides_": [ 157.0 ],
-"_edit_lock_": true,
-"_edit_vertical_guides_": [ 280.0 ]
-}
 speed = 15000
 
 [node name="thought_hint" parent="player" instance=ExtResource( 27 )]
 
 [node name="final_quest_finished" type="Timer" parent="player"]
 wait_time = 4.0
+
+[node name="instruction" parent="player" instance=ExtResource( 35 )]
+visible = false
+anchor_top = 0.0
+anchor_bottom = 0.0
+margin_left = -334.118
+margin_top = -216.471
+margin_right = 193.882
+margin_bottom = -160.471
+rect_scale = Vector2( 1.30872, 1.18821 )
+script = ExtResource( 36 )
+instruction_text = "Find the thief"
+
+[node name="instruction_time" type="Timer" parent="player/instruction"]
+wait_time = 1.5
+
+[node name="lowborn_child" parent="." instance=ExtResource( 31 )]
+position = Vector2( 752, 256 )
+scale = Vector2( 0.75, 0.75 )
 
 [node name="drunk_man4_npc" parent="." instance=ExtResource( 28 )]
 position = Vector2( 763, 253 )
@@ -580,11 +609,6 @@ script = null
 
 [node name="drunk_man5_npc" parent="." instance=ExtResource( 28 )]
 position = Vector2( 723, 252 )
-scale = Vector2( 1.2, 1.2 )
-script = null
-
-[node name="drunk_man6_npc" parent="." instance=ExtResource( 28 )]
-position = Vector2( 706, 252 )
 scale = Vector2( 1.2, 1.2 )
 script = null
 
@@ -598,10 +622,37 @@ shape = SubResource( 23 )
 
 [node name="key_e" parent="secundaryZone" instance=ExtResource( 22 )]
 position = Vector2( -184, -36 )
-scale = Vector2( 1.1, 1.2 )
+scale = Vector2( 1, 1.2 )
+
+[node name="mini_hint" parent="secundaryZone" instance=ExtResource( 37 )]
+margin_left = -248.0
+margin_top = -89.0
+margin_right = -248.0
+margin_bottom = -89.0
+rect_scale = Vector2( 0.674944, 0.763359 )
+script = ExtResource( 38 )
+instruction_text = "Go to the alley"
 
 [node name="secundaryZonePos" type="Position2D" parent="."]
 position = Vector2( 1152, 251 )
+
+[node name="flexible_dialogues_side_miss" parent="." instance=ExtResource( 33 )]
+margin_left = 616.0
+margin_top = 136.0
+margin_right = 656.0
+margin_bottom = 176.0
+rect_scale = Vector2( 0.846291, 0.86262 )
+dialogue_file = "res://dialogues/extra_secondary_mission/mission_start.json"
+
+[node name="event_trigger3" type="Area2D" parent="."]
+position = Vector2( 1136, 256 )
+collision_layer = 8
+collision_mask = 8
+script = ExtResource( 34 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="event_trigger3"]
+position = Vector2( 0, -16 )
+shape = SubResource( 24 )
 
 [connection signal="finished_final_quest" from="." to="player" method="_on_Main_finished_final_quest"]
 [connection signal="tree_entered" from="." to="zone2" method="_on_Main_tree_entered"]
@@ -612,6 +663,14 @@ position = Vector2( 1152, 251 )
 [connection signal="body_entered" from="zone2" to="zone2" method="_on_door_area_body_entered"]
 [connection signal="body_exited" from="zone2" to="." method="_on_door_area_body_exited"]
 [connection signal="body_exited" from="zone2" to="zone2" method="_on_door_area_body_exited"]
+[connection signal="body_entered" from="sec_mission_init" to="sec_mission_init" method="_on_sec_mission_init_body_entered"]
+[connection signal="started_side_mission" from="sec_mission_init" to="flexible_dialogues_side_miss" method="_on_sec_mission_init_started_side_mission"]
 [connection signal="timeout" from="player/final_quest_finished" to="player" method="_on_final_quest_finished_timeout"]
+[connection signal="timeout" from="player/instruction/instruction_time" to="player/instruction" method="_on_instruction_time_timeout"]
 [connection signal="body_entered" from="secundaryZone" to="secundaryZone" method="_on_Main_body_entered"]
 [connection signal="body_exited" from="secundaryZone" to="secundaryZone" method="_on_Main_body_exited"]
+[connection signal="finished_dialogue" from="flexible_dialogues_side_miss" to="player" method="_on_flexible_dialogues_side_miss_finished_dialogue"]
+[connection signal="finished_dialogue" from="flexible_dialogues_side_miss" to="lowborn_child" method="_on_flexible_dialogues_side_miss_finished_dialogue"]
+[connection signal="body_entered" from="event_trigger3" to="event_trigger3" method="_on_event_trigger3_body_entered"]
+[connection signal="side_mission_level_s" from="event_trigger3" to="player/instruction" method="_on_event_trigger3_side_mission_level_s"]
+[connection signal="side_mission_level_s" from="event_trigger3" to="lowborn_child" method="_on_event_trigger3_side_mission_level_s"]

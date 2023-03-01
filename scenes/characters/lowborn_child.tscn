@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=2]
+[gd_scene load_steps=59 format=2]
 
 [ext_resource path="res://scripts/npc/lowborn_child.gd" type="Script" id=1]
 [ext_resource path="res://assets/characters/NPC/special_secondary_npc/idle sheet-Sheet.png" type="Texture" id=2]
@@ -279,23 +279,37 @@ animations = [ {
 } ]
 
 [sub_resource type="CapsuleShape2D" id=33]
-radius = 16.0
+radius = 13.0
 height = 6.0
+
+[sub_resource type="RectangleShape2D" id=85]
+extents = Vector2( 17, 14 )
 
 [node name="lowborn_child" type="KinematicBody2D"]
 position = Vector2( 192, 132 )
+collision_layer = 8
+collision_mask = 8
 script = ExtResource( 1 )
 speed = 8500
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 32 )
 animation = "idle"
-frame = 13
+frame = 9
 playing = true
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 8, 2 )
+position = Vector2( 11, 2 )
 shape = SubResource( 33 )
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 11, 1 )
+shape = SubResource( 85 )
 
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]

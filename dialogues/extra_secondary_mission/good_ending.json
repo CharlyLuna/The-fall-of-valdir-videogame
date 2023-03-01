@@ -1,0 +1,54 @@
+[
+  [
+    {
+      "name": "Ragged child",
+      "message": "I... I mean... thank you"
+    },
+    {
+      "name": "Traveler",
+      "message": "It's okay, I know you have suffered a lot"
+    },
+    {
+      "name": "Ragged child",
+      "message": "Normally people don't care about children in this zone, the lack of money make impossible for kids to live in good conditions"
+    },
+    {
+      "name": "Traveler",
+      "message": "You are the first kid I've seen in this place, there are more?"
+    },
+    {
+      "name": "Ragged child",
+      "message": "There are a lot, but most of us preffer to be hidden"
+    },
+    {
+      "name": "Ragged child",
+      "message": "Life have never been easy, but nowadays it seems like we struggle more and more, money is everything in this city"
+    },
+    {
+      "name": "Ragged child",
+      "message": "If you don't produce you aren't useful, and if you don't have money you have no voice or power"
+    },
+    {
+      "name": "Traveler",
+      "message": "That's crazy, how could that be... I'm trying to find out what happened here, It's been a long time since I visit Valdir"
+    },
+    {
+      "name": "Ragged child",
+      "message": "I wish you a lot of luck with that, maybe you can find out more about what happened in the workers zone"
+    },
+    {
+      "name": "Traveler",
+      "message": "Thank you I'll go there now then, be safe kid"
+    },
+    {
+      "name": "Ragged child",
+      "message": "Farewell... friend"
+    }
+  ],
+  [
+    {
+      "name": "ERROR",
+      "message": "If you're seeing this message something bad happened"
+    }
+  ]
+]

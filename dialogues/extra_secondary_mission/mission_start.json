@@ -1,0 +1,22 @@
+[
+  [
+    {
+      "name": "Traveler",
+      "message": "..."
+    },
+    {
+      "name": "Traveler",
+      "message": "Wait a second... my purse is gone"
+    },
+    {
+      "name": "Traveler",
+      "message": "Hey! thief!"
+    }
+  ],
+  [
+    {
+      "name": "ERROR",
+      "message": "If you're seeing this message something bad happened"
+    }
+  ]
+]

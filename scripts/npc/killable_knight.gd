@@ -13,9 +13,7 @@ var quest_finished = Global.side_quest_finished
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	#Only leave the hide and queue_free() method
-	#hide()
-	move(1170)
+	hide()
 	if quest_finished:
 		queue_free()
 	

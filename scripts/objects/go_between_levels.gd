@@ -1,15 +1,6 @@
 extends Area2D
 
 var entered = false
-
-func _on_door_area_body_entered(body: PhysicsBody2D):
-	$key_e.show()
-	entered = true
-
-
-func _on_door_area_body_exited(body):
-	$key_e.hide()
-	entered = false
 	
 func _process(delta):
 	var path_to_level = "res://scenes/{level}.tscn".format({"level": self.name})
@@ -20,10 +11,12 @@ func _process(delta):
 
 
 func _on_Main_body_entered(body: PhysicsBody2D):
+	$mini_hint.show()
 	$key_e.show()
 	entered = true
 
 
 func _on_Main_body_exited(body: PhysicsBody2D):
+	$mini_hint.hide()
 	$key_e.hide()
 	entered = false

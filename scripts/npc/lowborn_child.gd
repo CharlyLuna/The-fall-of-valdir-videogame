@@ -96,3 +96,26 @@ func _on_AnimatedSprite_animation_finished():
 
 func _on_flexible_dialogues_kinght_finished_dialogue():
 	Global.controlling_special_charac = true
+
+
+func _on_player_finished_side_quest():
+	move(1900,1)
+
+
+func _on_event_trigger3_child_has_gone():
+	hide()
+	Global.side_quest_finished = true
+	queue_free()
+
+
+
+func _on_flexible_dialogues_side_miss_finished_dialogue():
+	move(1170,1)
+
+
+func _on_event_trigger3_side_mission_level_s():
+	hide()
+	var player = get_tree().get_root().find_node("player",true,false)
+	if player:
+		player.set_active(true)
+	queue_free()
