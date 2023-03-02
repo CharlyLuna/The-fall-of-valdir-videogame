@@ -17,6 +17,7 @@ var first_talk_barkeeper = true
 var first_talk_drunk = true
 # Mission expanded
 var controlling_special_charac = false
+var side_quest_started = false
 var side_quest_finished = false
 var last_talk = false
 var npc_trust = 0

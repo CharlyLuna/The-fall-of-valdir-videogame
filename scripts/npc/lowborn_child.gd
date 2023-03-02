@@ -9,10 +9,14 @@ var is_attacking = false
 var direction = 0
 var pos = 600
 var quest_finished = Global.side_quest_finished
+var quest_started = Global.side_quest_started
 signal attack()
 	
 func _ready():
+	var zone = get_tree().get_current_scene().name
 	if quest_finished:
+		queue_free()
+	elif zone == "Main" && quest_started:
 		queue_free()
 
 func start(pos):
@@ -101,8 +105,7 @@ func _on_flexible_dialogues_kinght_finished_dialogue():
 func _on_player_finished_side_quest():
 	move(1900,1)
 
-
-func _on_event_trigger3_child_has_gone():
+func _on_event_trigger4_child_has_gone():
 	hide()
 	Global.side_quest_finished = true
 	queue_free()
@@ -119,3 +122,5 @@ func _on_event_trigger3_side_mission_level_s():
 	if player:
 		player.set_active(true)
 	queue_free()
+
+
