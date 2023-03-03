@@ -1,0 +1,62 @@
+[
+  [
+    {
+      "name": "Knight",
+      "message": "Well it seems like I found the rat that have been steeling in this zone"
+    },
+    {
+      "name": "Ragged child",
+      "message": "A knight? here, in the rathole? you came to tax our people, dont you?"
+    },
+    {
+      "name": "Knight",
+      "message": "And what if I did? it's part of my job as knight of the city"
+    },
+    {
+      "name": "Knight",
+      "message": "Now, I heard that you stole something from this man..."
+    },
+    {
+      "name": "Knight",
+      "message": "Of course is my duty to get that back to him, for the right price"
+    },
+    {
+      "name": "Knight",
+      "message": "He may have something valuable in that dirty bag"
+    },
+    {
+      "name": "Traveler",
+      "message": "This is not necessary Sir, I just borrowed him my purse"
+    },
+    {
+      "name": "Knight",
+      "message": "Ha ha ha, you wont trick me..."
+    },
+    {
+      "name": "Ragged child",
+      "message": "Get away from here! I wont give you nothing"
+    },
+    {
+      "name": "Knight",
+      "message": "Oh it doesn't matter if you want kid, I will take it from you"
+    },
+    {
+      "name": "Knight",
+      "message": "And if you cry it's better, I love when the rats screams before getting caught"
+    },
+    {
+      "name": "Traveler",
+      "message": "Sir, please... don't hurt him"
+    },
+    {
+      "name": "Knight",
+      "message": "Do not interfere, or you will be next"
+    }
+  ],
+  [
+    {
+      "name": "ERROR",
+      "message": "If you are seeing this message something went bad"
+    }
+  ]
+]

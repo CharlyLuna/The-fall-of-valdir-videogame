@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=2]
+[gd_scene load_steps=53 format=2]
 
 [ext_resource path="res://assets/tiles/environment/layers/sliced-tileset/ground.png" type="Texture" id=1]
 [ext_resource path="res://assets/tiles/environment/layers/sliced-tileset/window.png" type="Texture" id=2]
@@ -36,6 +36,11 @@
 [ext_resource path="res://scripts/objects/event_trigger4.gd" type="Script" id=34]
 [ext_resource path="res://scenes/objects/mini_hint.tscn" type="PackedScene" id=35]
 [ext_resource path="res://scripts/objects/mini_hint.gd" type="Script" id=36]
+[ext_resource path="res://scripts/npc/shady_guy_npc.gd" type="Script" id=37]
+[ext_resource path="res://scripts/objects/flexible_dialogues_drug_vendor.gd" type="Script" id=38]
+[ext_resource path="res://scripts/objects/desicion_box_drug_vendor.gd" type="Script" id=39]
+[ext_resource path="res://scripts/npc/bandit_npc.gd" type="Script" id=40]
+[ext_resource path="res://scenes/objects/dialogue.tscn" type="PackedScene" id=41]
 
 [sub_resource type="TileSet" id=20]
 0/name = "wall"
@@ -470,6 +475,14 @@ region_rect = Rect2( 0, 0, 768, 288 )
 [node name="Bandit" parent="." instance=ExtResource( 19 )]
 position = Vector2( 584, 544 )
 scale = Vector2( 1.2, 1.2 )
+script = ExtResource( 40 )
+
+[node name="dialogue" parent="Bandit" instance=ExtResource( 41 )]
+dialogue_file = "res://dialogues/extra_secondary_mission/bandit.json"
+
+[node name="key_e" parent="Bandit" instance=ExtResource( 31 )]
+position = Vector2( 0, -26.6667 )
+scale = Vector2( 0.8, 0.9 )
 
 [node name="Bandit2" parent="." instance=ExtResource( 19 )]
 position = Vector2( 1128, 544 )
@@ -478,6 +491,28 @@ scale = Vector2( 1.2, 1.2 )
 [node name="shady_guy_npc" parent="." instance=ExtResource( 20 )]
 position = Vector2( 224, 544 )
 scale = Vector2( 1.2, 1.2 )
+script = ExtResource( 37 )
+
+[node name="key_e" parent="shady_guy_npc" instance=ExtResource( 31 )]
+position = Vector2( 0.833328, -28.3333 )
+scale = Vector2( 0.8, 0.9 )
+
+[node name="flexible_dialogues" parent="shady_guy_npc" instance=ExtResource( 29 )]
+margin_left = -99.1667
+margin_top = -87.5
+margin_right = -59.1667
+margin_bottom = -47.5
+rect_scale = Vector2( 0.694932, 0.685727 )
+script = ExtResource( 38 )
+dialogue_file = "res://dialogues/extra_secondary_mission/drug_vendor.json"
+
+[node name="desicion_box" parent="shady_guy_npc" instance=ExtResource( 27 )]
+margin_left = -85.8333
+margin_top = -142.5
+margin_right = -45.8333
+margin_bottom = -102.5
+rect_scale = Vector2( 0.748149, 0.855177 )
+script = ExtResource( 39 )
 
 [node name="drunk_man6_npc" parent="." instance=ExtResource( 21 )]
 position = Vector2( 816, 544 )
@@ -531,7 +566,7 @@ position = Vector2( 13, -15 )
 shape = SubResource( 24 )
 
 [node name="player" parent="." instance=ExtResource( 17 )]
-position = Vector2( 48, 549 )
+position = Vector2( 48, 548 )
 scale = Vector2( 0.85, 0.85 )
 
 [node name="killable_knight" parent="." instance=ExtResource( 28 )]
@@ -608,6 +643,14 @@ script = ExtResource( 34 )
 position = Vector2( 0, -16 )
 shape = SubResource( 28 )
 
+[connection signal="body_entered" from="Bandit" to="Bandit" method="_on_Bandit_body_entered"]
+[connection signal="body_exited" from="Bandit" to="Bandit" method="_on_Bandit_body_exited"]
+[connection signal="body_entered" from="shady_guy_npc" to="shady_guy_npc" method="_on_shady_guy_npc_body_entered"]
+[connection signal="body_exited" from="shady_guy_npc" to="shady_guy_npc" method="_on_shady_guy_npc_body_exited"]
+[connection signal="show_desicion" from="shady_guy_npc/flexible_dialogues" to="shady_guy_npc/desicion_box" method="_on_flexible_dialogues_show_desicion"]
+[connection signal="appeared" from="shady_guy_npc/desicion_box" to="shady_guy_npc" method="_on_desicion_box_appeared"]
+[connection signal="desicion_taken" from="shady_guy_npc/desicion_box" to="shady_guy_npc/flexible_dialogues" method="_on_desicion_box_desicion_taken"]
+[connection signal="disappear" from="shady_guy_npc/desicion_box" to="shady_guy_npc" method="_on_desicion_box_disappear"]
 [connection signal="attack" from="lowborn_child" to="killable_knight" method="_on_lowborn_child_attack"]
 [connection signal="attack" from="lowborn_child" to="Attack_instruction" method="_on_lowborn_child_attack"]
 [connection signal="desicion_taken" from="lowborn_child/desicion_box" to="lowborn_child/flexible_dialogues" method="_on_desicion_box_desicion_taken"]

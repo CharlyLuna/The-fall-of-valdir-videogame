@@ -1,0 +1,30 @@
+[
+  [
+    {
+      "name": "Traveler",
+      "message": "Excuse, have you seen a kid over here?"
+    },
+    {
+      "name": "Bandit",
+      "message": "Be more specific"
+    },
+    {
+      "name": "Traveler",
+      "message": "He stole my purse and wears a red hood"
+    },
+    {
+      "name": "Bandit",
+      "message": "Oh... that rat is up ahead, be careful with him"
+    },
+    {
+      "name": "Bandit",
+      "message": "You never know what some are hidding"
+    }
+  ],
+  [
+    {
+      "name": "Bandit",
+      "message": "I already told you what I know"
+    }
+  ]
+]

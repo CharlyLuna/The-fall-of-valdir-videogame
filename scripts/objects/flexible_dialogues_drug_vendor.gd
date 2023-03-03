@@ -14,10 +14,6 @@ var character = Global.character
 signal show_desicion(message, options)
 
 func _ready():
-	if character == "woman":
-		dialogue_file = "res://dialogues/extra_secondary_mission/knight_talk_lady.json"
-	else:
-		dialogue_file = "res://dialogues/extra_secondary_mission/knight_talk_man.json"
 	$NinePatchRect.visible = false
 
 func play():
@@ -112,15 +108,10 @@ func _on_Timer_timeout():
 
 func _on_Tween_tween_completed(object, key):
 	finished = true
-
-
+	
 func _on_desicion_box_desicion_taken(next_dialogue):
 	# Change dialogue according to desicion taken
 	current_dialogue_index = next_dialogue -1
 	next_line()
 	is_active = true
 	$NinePatchRect.visible = true
-
-func _on_event_trigger2_guard_entered():
-	play()
-	show()

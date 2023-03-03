@@ -2,7 +2,7 @@
   [
     {
       "name": "Ragged child",
-      "message": "I... I mean... thank you"
+      "message": "Thank you, for listening, for caring"
     },
     {
       "name": "Traveler",
@@ -10,7 +10,11 @@
     },
     {
       "name": "Ragged child",
-      "message": "Normally people don't care about children in this zone, the lack of money make impossible for kids to live in good conditions"
+      "message": "Normally people don't care about children in this zone"
+    },
+    {
+      "name": "Ragged child",
+      "message": "The lack of money make impossible for kids to live in good conditions"
     },
     {
       "name": "Traveler",
@@ -22,19 +26,27 @@
     },
     {
       "name": "Ragged child",
-      "message": "Life have never been easy, but nowadays it seems like we struggle more and more, money is everything in this city"
+      "message": "Life have never been easy, but nowadays it seems like we struggle more and more"
     },
     {
       "name": "Ragged child",
-      "message": "If you don't produce you aren't useful, and if you don't have money you have no voice or power"
+      "message": "Money is everything in this city... power is in bad people's hands"
+    },
+    {
+      "name": "Ragged child",
+      "message": "If you don't produce you aren't useful, and if you don't have money you have no voice"
     },
     {
       "name": "Traveler",
-      "message": "That's crazy, how could that be... I'm trying to find out what happened here, It's been a long time since I visit Valdir"
+      "message": "How could that be... I'm trying to find out what happened here, everything... is different"
     },
     {
       "name": "Ragged child",
-      "message": "I wish you a lot of luck with that, maybe you can find out more about what happened in the workers zone"
+      "message": "I wish you a lot of luck with that, maybe you can find out more in the workers zone"
+    },
+    {
+      "name": "Traveler",
+      "message": "It's been a long time since I visit Valdir... All... is different now, even people"
     },
     {
       "name": "Traveler",

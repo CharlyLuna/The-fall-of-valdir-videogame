@@ -1,0 +1,58 @@
+[
+  [
+    {
+      "name": "Shady guy",
+      "message": "Hey, do you want some red dust?"
+    },
+    {
+      "name": "Shady guy",
+      "message": "It can make you forget about the troubles of the city"
+    },
+    {
+      "name": "Shady guy",
+      "message": "Come on, it's cheap, and it makes people happier"
+    },
+    {
+      "name": "Option",
+      "message": "Should I buy this red dust?",
+      "options": [
+        {
+          "text": "Yes",
+          "goes_to": 4
+        },
+        {
+          "text": "No",
+          "goes_to": 6
+        }
+      ]
+    },
+    {
+      "name": "Shady guy",
+      "message": "Perfect! It will put your senses to sleep..."
+    },
+    {
+      "name": "Option",
+      "message": "I feel strange I think I should go now",
+      "options": [
+        {
+          "text": "Go away",
+          "goes_to": 6
+        },
+        {
+          "text": "Say nothing",
+          "goes_to": 6
+        }
+      ]
+    },
+    {
+      "name": "Shady guy",
+      "message": "Come back later if you want some, I'm sure you will"
+    }
+  ],
+  [
+    {
+      "name": "Shady guy",
+      "message": "Come back later"
+    }
+  ]
+]

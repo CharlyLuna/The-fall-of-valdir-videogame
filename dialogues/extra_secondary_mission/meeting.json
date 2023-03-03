@@ -9,16 +9,40 @@
       "message": "Yeah? well you know... I need it more than you"
     },
     {
+      "name": "Traveler",
+      "message": "Pff... Where are your parents? You're too young to be stealing"
+    },
+    {
+      "name": "Ragged child",
+      "message": "... It doesn't concern you, just go away, you don't belong here"
+    },
+    {
+      "name": "Traveler",
+      "message": "I wont leave until I get my money back"
+    },
+    {
+      "name": "Ragged child",
+      "message": "You are just like them..."
+    },
+    {
+      "name": "Traveler",
+      "message": "Like who? what are you talking about?"
+    },
+    {
+      "name": "Ragged child",
+      "message": "Shout up! you're all the same, you don't understand, you haven't seen"
+    },
+    {
       "name": "Option",
       "message": "What happened to this kid? He seems... broken, I must be careful with what I say next",
       "options": [
         {
           "text": "Empathize",
-          "goes_to": 3
+          "goes_to": 9
         },
         {
           "text": "Get angry",
-          "goes_to": 12
+          "goes_to": 18
         }
       ]
     },
@@ -28,7 +52,7 @@
     },
     {
       "name": "Ragged child",
-      "message": "You understand?? don't make me laugh, you don't know anything about me, about what've done"
+      "message": "You understand?? don't make me laugh, you don't know anything about me, about what I had to do"
     },
     {
       "name": "Traveler",
@@ -40,7 +64,7 @@
     },
     {
       "name": "Traveler",
-      "message": "I can see you've been through a lot, I haven't seen a lot of this place but it doesn't look like a place for kids"
+      "message": "I can see you've been through a lot, this doesn't look like a place for kids"
     },
     {
       "name": "Ragged child",
@@ -52,47 +76,71 @@
     },
     {
       "name": "Ragged child",
-      "message": "You can't, you are not like us, I can tell... you don't understand our situation, ¡¡nobody does!!"
+      "message": "You can't, nobody can help me... I'm... alone"
     },
     {
       "name": "Option",
-      "message": "This is going over my control... What should I do?",
+      "message": "So, his parents may be dead... and he has been alone all this time, I need to know more",
       "options": [
         {
-          "text": "Stay calm",
-          "goes_to": 15
+          "text": "Insist to talk",
+          "goes_to": 25
         },
         {
-          "text": "Yell",
-          "goes_to": 15
+          "text": "Ask more",
+          "goes_to": 25
         }
       ]
     },
     {
       "name": "Traveler",
-      "message": "You need it more? "
+      "message": "Hey! I really don't understand you, but you should be more respectfull, you just stole my money"
     },
     {
       "name": "Ragged child",
-      "message": "You don't understand our situation, ¡¡nobody does!!"
+      "message": "So your only concern is your money, this is only about that"
+    },
+    {
+      "name": "Traveler",
+      "message": "Of course is about that... pff, but not only the money"
+    },
+    {
+      "name": "Traveler",
+      "message": "I'm sorry I just got angry, I don't want to yell at you, all of this situation-"
+    },
+    {
+      "name": "Ragged child",
+      "message": "It doesn't matter, that's the usual behavior towards children in this zone"
+    },
+    {
+      "name": "Ragged child",
+      "message": "You still don't understand how Valdir works, and yet here you are, going inside the darkness"
     },
     {
       "name": "Option",
-      "message": "This is going over my control... What should I do?",
+      "message": "He talks like an adult, there's no hope in his eyes... but he is just a kid",
       "options": [
         {
-          "text": "Stay calm",
-          "goes_to": 15
+          "text": "Ask about him",
+          "goes_to": 25
         },
         {
-          "text": "Yell",
-          "goes_to": 15
+          "text": "Talk",
+          "goes_to": 25
         }
       ]
     },
     {
+      "name": "Traveler",
+      "message": "I..."
+    },
+    {
       "name": "Ragged child",
-      "message": "Final test message"
+      "message": "You don't need to say nothing..."
+    },
+    {
+      "name": "Ragged child",
+      "message": "Wait... who is that?"
     }
   ],
   [

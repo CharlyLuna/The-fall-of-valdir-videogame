@@ -14,81 +14,125 @@
         },
         {
           "text": "Blame him",
-          "goes_to": 11
+          "goes_to": 12
         }
       ]
     },
     {
       "name": "Traveler",
-      "message": "I understand, But-"
+      "message": "Kid... that... is not your fault"
     },
     {
       "name": "Ragged child",
-      "message": "You understand?? don't make me laugh, you don't know anything about me, about what've done"
+      "message": "Of course it is! I just kill him... I'm a murderer"
     },
     {
       "name": "Traveler",
-      "message": "You're right, I don't know you and yet I can see how broken you are"
+      "message": "He was going to hurt you or maybe kill you, I can tell"
     },
     {
       "name": "Ragged child",
-      "message": "You... I... "
+      "message": "I hate this city... I hate what I became"
     },
     {
       "name": "Traveler",
-      "message": "I can see you've been through a lot, I haven't seen a lot of this place but it doesn't look like a place for kids"
+      "message": "It's my fault, I should have done something, instead you acted"
     },
     {
       "name": "Ragged child",
-      "message": "Just go away..."
-    },
-    {
-      "name": "Traveler",
-      "message": "Maybe I can help you, if you explain me what happened to you"
+      "message": "He would have killed you..."
     },
     {
       "name": "Ragged child",
-      "message": "You can't, you are not like us, I can tell... you don't understand our situation, ¡¡nobody does!!"
+      "message": "I just... want this madness to be over"
+    },
+    {
+      "name": "Ragged child",
+      "message": "Why did I have to be born poor? People with money can do what they want"
+    },
+    {
+      "name": "Ragged child",
+      "message": "But me? I have to beg, do dirty jobs and steel to just even get something to eat"
     },
     {
       "name": "Option",
-      "message": "So she is a girl... She seems so helpless, I feel sorry for her",
+      "message": "He seems so helpless, I feel sorry for him",
       "options": [
         {
-          "text": "Hug her",
-          "goes_to": 14
+          "text": "Hug him",
+          "goes_to": 23
         },
         {
-          "text": "Support her",
-          "goes_to": 14
+          "text": "Support him",
+          "goes_to": 23
         }
       ]
     },
     {
       "name": "Traveler",
-      "message": "You need it more? "
+      "message": "You killed a man... you actually did it, what have you done?"
     },
     {
       "name": "Ragged child",
-      "message": "You don't understand our situation, ¡¡nobody does!!"
+      "message": "I... I..."
+    },
+    {
+      "name": "Traveler",
+      "message": "You are a murderer now, you know it right?"
+    },
+    {
+      "name": "Ragged child",
+      "message": "I always have been..."
+    },
+    {
+      "name": "Traveler",
+      "message": "You should go away, otherwise more guards will come for you"
+    },
+    {
+      "name": "Ragged child",
+      "message": "There's no place to go away, hidding it's the only option for people like me"
+    },
+    {
+      "name": "Traveler",
+      "message": "I'm sorry... I really feel sorry for your situation"
+    },
+    {
+      "name": "Ragged child",
+      "message": "Maybe... but that doesn't help me, only a miracle can help me now"
+    },
+    {
+      "name": "Traveler",
+      "message": "You can take some of my money, it could help you..."
+    },
+    {
+      "name": "Ragged child",
+      "message": "Thank you... I will, maybe I could survive a little longer"
     },
     {
       "name": "Option",
-      "message": "So she is a girl...She seems so helpless, but she did something unforgivable",
+      "message": "He killed a man... despite this... I feel bad for him.",
       "options": [
         {
-          "text": "Support her",
-          "goes_to": 14
+          "text": "Support him",
+          "goes_to": 23
         },
         {
-          "text": "Say nothing",
-          "goes_to": 14
+          "text": "It will be ok",
+          "goes_to": 23
         }
       ]
     },
     {
+      "name": "Traveler",
+      "message": "It's okay... everything will be fine"
+    },
+    {
       "name": "Ragged child",
-      "message": "Final test message"
+      "message": "Here's your money... You will need it if you're going to stay in Valdir"
+    },
+    {
+      "name": "Traveler",
+      "message": "Kid..."
     }
   ],
   [
